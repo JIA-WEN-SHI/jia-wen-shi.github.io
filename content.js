@@ -86,20 +86,84 @@ window.PORTFOLIO = {
 },
   aigc: [
     {
-        "name": "中国联通 AIGC 贺岁视频",
-        "contribution": "从需求对接到全流程制作，独立完成。"
+        "id": "unicom",
+        "name": "中国联通 · IP 贺岁视频",
+        "kind": "品牌 IP / 贺岁短片",
+        "contribution": "从需求对接到全流程制作，独立完成。",
+        "image": "assets/aigc/unicom.jpg",
+        "imageWidth": 1280,
+        "imageHeight": 720,
+        "source": "https://rcnex06ug269.feishu.cn/file/XxtVbzFmgoz5jGxev0Oc7O2Vnud"
     },
     {
-        "name": "中国日报网 AI 视频",
-        "contribution": "牵头需求对接与制作，安排一位同事协助完成部分镜头。"
+        "id": "daily",
+        "name": "中国日报网 · 数字丝路",
+        "kind": "主题内容 / AI 视频",
+        "contribution": "牵头需求对接与制作，安排一位同事协助完成部分镜头。",
+        "image": "assets/aigc/daily.jpg",
+        "imageWidth": 960,
+        "imageHeight": 540,
+        "source": "https://rcnex06ug269.feishu.cn/file/BRN8bCpuSo6j5Ixidu7cs8rBnug"
     },
     {
-        "name": "南方基金 AIGC IP",
-        "contribution": "负责从客户沟通到最终交付的全过程。"
+        "id": "financial",
+        "name": "2025 金融街论坛 AI 预告片",
+        "kind": "活动传播 / AI 预告片",
+        "contribution": "负责需求对接与制作。",
+        "image": "assets/aigc/financial.jpg",
+        "imageWidth": 1280,
+        "imageHeight": 720,
+        "source": "https://rcnex06ug269.feishu.cn/file/ATyCbPJcjoghBGx4DJ5cwvmGnOd"
     },
     {
-        "name": "央视 AI「两弹一星」相关视频",
-        "contribution": "负责约 70% 的镜头制作。"
+        "id": "south-ip",
+        "name": "南方基金 · ETF 梦想森林",
+        "kind": "品牌 IP / 主题短片",
+        "contribution": "负责从客户沟通到最终交付的全过程。",
+        "image": "assets/aigc/south-ip.jpg",
+        "imageWidth": 960,
+        "imageHeight": 540,
+        "source": "https://rcnex06ug269.feishu.cn/file/IF62bZSemotFkcxGMvDcHEf2nue"
+    },
+    {
+        "id": "zitong",
+        "name": "央视 AI「两弹一星」· 梓潼",
+        "kind": "梓潼城 / 铸国魂 扬民韵",
+        "contribution": "负责约 70% 的镜头制作。",
+        "image": "assets/aigc/zitong.jpg",
+        "imageWidth": 960,
+        "imageHeight": 540,
+        "source": "https://rcnex06ug269.feishu.cn/file/J59QbAVZ4olfUWxUMXKcMHD6nib"
+    },
+    {
+        "id": "didi",
+        "name": "滴滴 ·《行者》参展作品",
+        "kind": "参展作品 / AI 制作",
+        "contribution": "负责制作。",
+        "image": "assets/aigc/didi.jpg",
+        "imageWidth": 540,
+        "imageHeight": 720,
+        "source": "https://rcnex06ug269.feishu.cn/file/GzTdbWFf9oBEHOxWkFzc0e3rnag"
+    },
+    {
+        "id": "huatai",
+        "name": "华泰证券 · IP 展示",
+        "kind": "自动化脚本 / 制作实践",
+        "contribution": "使用自己搭建的自动化脚本完成制作。",
+        "image": "assets/aigc/huatai.jpg",
+        "imageWidth": 960,
+        "imageHeight": 540,
+        "source": "https://rcnex06ug269.feishu.cn/file/BnFhbXM6Uo5zRlxEbqQcIsW6nic"
+    },
+    {
+        "id": "south-v2",
+        "name": "南方基金 · 2.0 版本",
+        "kind": "品牌内容 / AI 视频",
+        "contribution": "负责从客户沟通到最终交付的全过程。",
+        "image": "assets/aigc/south-v2.jpg",
+        "imageWidth": 960,
+        "imageHeight": 540,
+        "source": "https://rcnex06ug269.feishu.cn/file/BytBbxU4BoUsfvx6qi5caBYgnWb"
     },
     {
         "name": "李白主题 AI 视频",

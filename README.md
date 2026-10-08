@@ -4,6 +4,10 @@
 
 五个项目的案例、公开源码和五项可直接操作的前端演示。内容仍在逐步完善，不把模拟数据或未验收的能力写成真实业务成果。
 
+[内容平台方案演示视频（76 秒）](https://jia-wen-shi.github.io/#case-evocontent/video)
+
+案例页说明产品重点、个人职责、示例操作路线与拟议验证方法。验证方法属于下一步计划，不表示已完成真实用户测试。
+
 ## 项目
 
 - [地毯首图生产平台](https://github.com/JIA-WEN-SHI/carpet-hero-studio) · [案例](https://jia-wen-shi.github.io/#case-carpet) · [演示](https://jia-wen-shi.github.io/demos/carpet/)

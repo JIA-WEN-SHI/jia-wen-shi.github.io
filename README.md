@@ -6,11 +6,11 @@
 
 [内容平台方案演示视频（76 秒）](https://jia-wen-shi.github.io/#case-evocontent/video)
 
-案例页说明产品重点、个人职责、示例操作路线与拟议验证方法。验证方法属于下一步计划，不表示已完成真实用户测试。
+案例按业务目标、产品决策、核心流程、个人职责与阶段产出组织，配有示例操作路线与拟议验证方法。验证方法属于下一步计划，不表示已完成真实用户测试。
 
 ## 项目
 
-- [EvoContent · 内容运营工作台](https://github.com/JIA-WEN-SHI/evocontent-matrix) · [案例](https://jia-wen-shi.github.io/#case-evocontent) · [演示](https://jia-wen-shi.github.io/demos/evocontent/)
+- [EvoContent · 半自动内容运营平台](https://github.com/JIA-WEN-SHI/evocontent-matrix) · [案例](https://jia-wen-shi.github.io/#case-evocontent) · [演示](https://jia-wen-shi.github.io/demos/evocontent/)
 - [地毯首图生产平台](https://github.com/JIA-WEN-SHI/carpet-hero-studio) · [案例](https://jia-wen-shi.github.io/#case-carpet) · [演示](https://jia-wen-shi.github.io/demos/carpet/)
 - [PM OS · AI 产品工作台](https://github.com/JIA-WEN-SHI/pm-os) · [案例](https://jia-wen-shi.github.io/#case-pmos) · [演示](https://jia-wen-shi.github.io/demos/pmos/)
 - [债权申报审查工作台](https://github.com/JIA-WEN-SHI/claim-review-workbench) · [案例](https://jia-wen-shi.github.io/#case-legal) · [原型](https://jia-wen-shi.github.io/demos/legal/)

@@ -11,7 +11,7 @@
 ## 项目
 
 - [EvoContent · 半自动内容运营平台](https://github.com/JIA-WEN-SHI/evocontent-matrix) · [案例](https://jia-wen-shi.github.io/#case-evocontent) · [演示](https://jia-wen-shi.github.io/demos/evocontent/)
-- [地毯首图生产平台](https://github.com/JIA-WEN-SHI/carpet-hero-studio) · [案例](https://jia-wen-shi.github.io/#case-carpet) · [演示](https://jia-wen-shi.github.io/demos/carpet/)
+- [地毯电商图像生产平台](https://github.com/JIA-WEN-SHI/carpet-hero-studio) · [案例](https://jia-wen-shi.github.io/#case-carpet) · [演示](https://jia-wen-shi.github.io/demos/carpet/)
 - [PM OS · AI 产品工作台](https://github.com/JIA-WEN-SHI/pm-os) · [案例](https://jia-wen-shi.github.io/#case-pmos) · [演示](https://jia-wen-shi.github.io/demos/pmos/)
 - [债权申报审查工作台](https://github.com/JIA-WEN-SHI/claim-review-workbench) · [案例](https://jia-wen-shi.github.io/#case-legal) · [原型](https://jia-wen-shi.github.io/demos/legal/)
 - [实体门店 AI 经营助手](https://github.com/JIA-WEN-SHI/store-ai-assistant) · [案例](https://jia-wen-shi.github.io/#case-store) · [原型](https://jia-wen-shi.github.io/demos/store/)

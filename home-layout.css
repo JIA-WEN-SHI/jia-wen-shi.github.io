@@ -61,6 +61,7 @@
 .system-scope{font-size:11px;color:#c4d2bf;border-top:1px solid #c2d2bf26;padding-top:20px;margin:27px 0 0}
 .reliability-panel{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;margin:54px 0 35px;padding:50px;border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,#fcfaf6,#f3f0e9);scroll-margin-top:118px}
 .method-copy h2{font-size:clamp(33px,3.6vw,48px);line-height:1.35}
+.method-conclusion{white-space:nowrap}
 .method-copy h2 em{font-style:normal;color:var(--green);display:inline}
 .method-copy>p{font-size:14px;color:var(--muted);line-height:1.9;margin-top:25px}
 .principle-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:25px;border-top:1px solid var(--line);border-left:1px solid var(--line)}

@@ -1,10 +1,10 @@
-// 后续优先修改此文件里的文字、图片和材料清单。所有材料仅用于本地结构预览。
+// 后续优先修改此文件里的文字、图片和材料清单。案例文案与公开演示入口集中在此。
 window.PORTFOLIO = {
   name: '师嘉文', city: '北京', phone: '13932349275',
   roles: 'AIGC 产品经理 / AI 应用产品经理 / AI 解决方案产品经理',
   introduction: '从电商视觉与 AIGC 内容生产出发，通过客户沟通和社群交流理解业务需求，把需求拆成流程、方案和可展示的产品原型。',
   projects: [
-    {id:'carpet',number:'01',name:'地毯首图生产平台',en:'CARPET HERO STUDIO',category:'多模态 · 电商内容生产',stage:'本地开发版本',role:'整体产品设计与实现',github:'https://github.com/JIA-WEN-SHI/carpet-hero-studio',
+    {id:'carpet',number:'01',name:'地毯首图生产平台',en:'CARPET HERO STUDIO',category:'多模态 · 电商内容生产',stage:'本地开发版本',role:'整体产品设计与实现',github:'https://github.com/JIA-WEN-SHI/carpet-hero-studio',demo:'https://jia-wen-shi.github.io/demos/carpet/',
      statement:'把商品素材、场景参考与首图制作组织成一条生产流程。',image:'assets/carpet.png',imageNote:'本地已有工作台截图；截图为历史界面，功能范围以当前版本为准。',
      summary:'围绕地毯商品首图制作，设计商品导入、产品处理、场景生成与首图调整的工作台。本地已有前后端与生成接口代码，实际生成样例及当前验收结果待补充。',
      problem:'项目通过社群需求接触展开。客户的原始诉求、原有制作方式及具体困难尚待补充。',
@@ -13,7 +13,7 @@ window.PORTFOLIO = {
      implementation:'已有上传、生成任务、模型接口适配及结果存储代码。此处先展示流程与界面，后续补充真实调用记录、输入输出对照与失败样例。',
      outcome:'已形成本地产品结构和工作台。尚未通过真实用户业务案例验证，当前生成效果未在本轮重新验收。',
      gaps:['客户最初提出的需求与原有制作流程','一组商品原图、参考场景与实际生成结果','你做过的关键调整，以及客户展示反馈','项目起止时间和当前是否继续推进']},
-    {id:'pmos',number:'02',name:'PM OS · AI 产品工作台',en:'AI PRODUCT WORKSPACE',category:'Agent · 产品工作流',stage:'本地工作台 · 持续探索',role:'产品规划、交互设计与实现',github:'https://github.com/JIA-WEN-SHI/pm-os',
+    {id:'pmos',number:'02',name:'PM OS · AI 产品工作台',en:'AI PRODUCT WORKSPACE',category:'Agent · 产品工作流',stage:'本地工作台 · 持续探索',role:'产品规划、交互设计与实现',github:'https://github.com/JIA-WEN-SHI/pm-os',demo:'https://jia-wen-shi.github.io/demos/pmos/',
      statement:'让分散的对话、资料和阶段产出，回到同一个项目。',image:'assets/pmos.png',imageNote:'本地证据引用验收截图，内容为测试资料；不代表真实用户案例。',
      summary:'围绕 AI 辅助产品工作的资料、任务、报告与阶段交接，设计八阶段工作台。当前资料中已有报告版本、证据引用、本地保存和后台运行等能力。',
      problem:'在使用 AI 做调研与方案整理时，项目资料和长对话分散，阶段产出难以衔接，执行过程与确认状态需要更清楚地呈现。',
@@ -31,7 +31,7 @@ window.PORTFOLIO = {
      implementation:'技术说明聚焦协作过程：识别结果如何映射为前端字段、字段如何进入审核界面。后端由技术伙伴负责；项目在字段映射阶段中断，未完成端到端智能审核。',
      outcome:'已完成流程、方案和前端界面的展示。后端技术伙伴退出后，合作项目结束。未使用真实用户业务案例验证。历史真实材料参考与后续合成演示分别说明。',
      gaps:['原来 Excel 加人工审核的具体步骤','前端演示后客户或朋友的反馈','项目时间；从流水审核扩展到债权审查的原因','合作期原型与后续规则演示的版本、贡献归属']},
-    {id:'evocontent',number:'04',name:'EvoContent · 内容运营工作台',en:'CONTENT OPERATIONS',category:'Agent · 内容运营',stage:'本地开发版本',role:'整体产品设计与实现',github:'https://github.com/JIA-WEN-SHI/evocontent-matrix',
+    {id:'evocontent',number:'04',name:'EvoContent · 内容运营工作台',en:'CONTENT OPERATIONS',category:'Agent · 内容运营',stage:'本地开发版本',role:'整体产品设计与实现',github:'https://github.com/JIA-WEN-SHI/evocontent-matrix',demo:'https://jia-wen-shi.github.io/demos/evocontent/',
      statement:'连接采集、草稿、人工审核与内容反馈。',image:'assets/evocontent.png',imageNote:'本地历史工作台截图；当前流程以最新版本和实际运行范围为准。',
      summary:'围绕内容运营组织采集、资料整理、选题、草稿、审核、人工发布登记和反馈。已有工程与迭代材料，完整的真实发布到反馈验证仍待补充。',
      problem:'项目的原始需求、目标使用者和原有运营方式待补充。现有设计关注内容资料、任务状态和反馈之间的衔接。',

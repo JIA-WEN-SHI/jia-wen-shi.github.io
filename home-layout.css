@@ -241,7 +241,7 @@
 .logic-detail-link{display:flex;justify-content:space-between;font-size:10px;color:var(--green);border-top:1px solid #c1ccba;padding-top:10px;margin-top:13px}
 .logic-diagram:hover .logic-detail-link{text-decoration:underline;text-underline-offset:3px}
 .featured-card:nth-child(3) .feature-body{align-self:center}
-@media(min-width:721px){.featured-card:nth-child(-n+2){display:flex;flex-direction:column}.featured-card:nth-child(-n+2) .feature-diagram{flex:1}}
+@media(min-width:721px){.featured-card:nth-child(-n+2){display:flex;flex-direction:column}.featured-card:nth-child(-n+2) .preview-diagram{flex:1}}
 @media(max-width:1050px) and (min-width:951px){.logic-pair{gap:22px}.logic-node{padding:10px}.logic-node strong{font-size:12px}.logic-node p{font-size:10px}.logic-artifact{font-size:9px}.logic-edge{width:22px;left:calc(50% - 11px)}.logic-check{gap:6px;padding:8px}.logic-diamond{min-width:13px;height:13px}.logic-return{padding:8px}.logic-check strong,.logic-return strong{font-size:9px}.logic-diagram h4{font-size:15px}}
 @media(max-width:720px){.logic-diagram{scroll-margin-top:24px}.logic-node strong{font-size:14px}.logic-node p{font-size:11px}.logic-legend{font-size:10px}.logic-checkpoint{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}.logic-contract ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:440px){.logic-diagram{padding:16px}.logic-pair{gap:20px}.logic-node{padding:10px 9px}.logic-node strong{font-size:13px}.logic-node p{font-size:11px}.logic-edge{width:20px;left:calc(50% - 10px)}.logic-edge small{font-size:7px}.logic-check{padding:8px 7px;gap:6px}.logic-diamond{min-width:12px;height:12px}.logic-return{padding:7px}.logic-check strong,.logic-return strong{font-size:10px}.logic-legend{gap:6px 10px}.logic-diagram h4{font-size:16px}.logic-artifact{font-size:9px}}
@@ -253,3 +253,74 @@
 .logic-connection{position:relative}
 .logic-connection:after{content:"";position:absolute;left:calc(50% - 3px);bottom:0;border-left:3px solid transparent;border-right:3px solid transparent;border-top:4px solid #9eaf98}
 @media(max-width:440px){.logic-name{font-size:22px}}
+
+/* Short home previews; full decision paths live in the case pages. */
+.preview-diagram{scroll-margin-top:112px}
+.preview-diagram h4{font-size:17px;font-weight:500;line-height:1.55;margin:0 0 10px}
+.preview-diagram .diagram-title{margin-bottom:10px;font-size:9px}
+.preview-diagram .diagram-title>a{font-size:17px;line-height:1}
+.preview-legend{display:flex;flex-wrap:wrap;gap:7px 14px;font-size:9px;color:var(--muted);margin-bottom:14px;line-height:1.6}
+.preview-legend>span{display:flex;gap:5px;align-items:center}
+.preview-legend i{width:7px;height:7px;border:1px solid #a3b69c;border-radius:2px;background:#eff4e9}
+.preview-legend i.kind-ai{background:#e6edf0;border-color:#9aadb5}
+.preview-legend i.kind-human{background:#efe5cd;border-color:#bea26c}
+.preview-pair{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.preview-node{position:relative;min-width:0;padding:9px 11px;border:1px solid #c1cfbd;border-radius:8px;background:#fbfcf7}
+.preview-node.kind-ai{background:#edf2f3;border-color:#b4c6cb}
+.preview-node.kind-human{background:#f1eadb;border-color:#c7b17e}
+.preview-node.kind-method{background:#f6f9f4;border-color:#bdcec0}
+.preview-node.logic-pending{border-style:dashed}
+.preview-node>span{position:absolute;top:9px;right:9px;font-size:8px;color:#80917c;line-height:1.4}
+.preview-node strong{display:block;font-size:13px;font-weight:500;line-height:1.5;padding-right:23px}
+.preview-node small{display:block;font-size:10px;color:var(--muted);line-height:1.5;margin-top:4px}
+.preview-arrow,.preview-merge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:17px;line-height:1;color:#82977b}
+.preview-gate{display:flex;justify-content:center;align-items:center;gap:7px;font-size:9px;color:#7c8e76;height:23px;line-height:1.4}
+.preview-gate>span{font-size:14px}
+.preview-note{font-size:11px;padding:9px 11px;margin-top:13px;background:var(--green);color:#faf9f0;border-radius:6px;line-height:1.6}
+.preview-scope{font-size:10px;line-height:1.7;color:var(--muted);margin:9px 0 0}
+.preview-link{display:flex;justify-content:space-between;font-size:10px;color:var(--green);border-top:1px solid #c1ccba;padding-top:9px;margin-top:10px}
+.tools-section{scroll-margin-top:112px}
+.tools-list{border-top:1px solid var(--line)}
+.tool-row{display:grid;grid-template-columns:.65fr 1fr 1.3fr;gap:23px;padding:21px 0;border-bottom:1px solid var(--line);align-items:start}
+.tool-title{display:flex;gap:11px;align-items:baseline}
+.tool-title small{font-size:10px;color:#819377}
+.tool-title h3{font-family:var(--serif);font-size:20px;line-height:1.45}
+.tool-names{display:flex;flex-wrap:wrap;gap:6px}
+.tool-names span{display:inline-block;padding:3px 9px;background:#e8ecdf;border:1px solid #d2dac8;border-radius:6px;font-size:11px;line-height:1.7}
+.tool-work p{font-size:12px;line-height:1.8;color:var(--muted);margin:0 0 6px}
+.tool-work a{font-size:11px;color:var(--green);border-bottom:1px solid #b9c8af;padding-bottom:2px}
+.evidence-standard{padding:20px 23px;margin-top:24px;border:1px solid var(--line);border-radius:13px;background:#fbf9f3}
+.evidence-standard>summary{cursor:pointer;font-size:13px;color:var(--green);line-height:1.8}
+.standard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:25px}
+.standard-grid h3{font-size:15px}
+.standard-grid p{font-size:12px;line-height:1.8;color:var(--muted);margin:9px 0}
+.standard-grid a{font-size:11px;color:var(--green)}
+.model-evaluation-design{margin-top:25px;padding-top:22px;border-top:1px solid var(--line)}
+.model-evaluation-design h3{font-size:17px;margin-bottom:12px}
+.model-evaluation-design p{font-size:12px;color:var(--muted);line-height:1.9}
+.detailed-diagram{margin:27px 0 30px;padding:24px;background:linear-gradient(145deg,#fffdf8,#edf1e7)}
+.detailed-diagram .logic-node p{font-size:12px}
+.detailed-diagram .logic-check strong,.detailed-diagram .logic-return strong{font-size:12px}
+.detailed-diagram .logic-check>div>span,.detailed-diagram .logic-return>span{font-size:11px}
+.detailed-diagram .logic-scope{font-size:11px}
+.flow-explanations{margin:30px 0}
+.flow-explanations>h3,.stage-contract>h3{font-size:23px;margin-bottom:23px}
+.flow-explanations article{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:22px 0;border-top:1px solid var(--line)}
+.flow-explanations article>span{font-size:12px;color:#87997d}
+.flow-explanations h4{font-size:18px;font-weight:500;line-height:1.6;margin:0 0 12px}
+.flow-explanations p{font-size:14px;line-height:1.85;color:var(--muted);margin:0 0 12px}
+.flow-explanations .flow-boundary{border-left:2px solid #bfcca9;padding-left:13px;font-size:13px;color:var(--green);margin-bottom:0}
+.stage-contract{margin:35px 0}
+.stage-contract>p{font-size:14px;color:var(--muted)}
+.case-expand{margin:24px 0;padding:19px 22px;border:1px solid var(--line);border-radius:12px;background:#fbfaf4}
+.case-expand>summary{cursor:pointer;font-size:14px;color:var(--green);line-height:1.8}
+.case-expand .lifecycle-grid,.case-expand .case-mechanisms{margin-top:25px}
+.evaluation-state{padding:17px 20px;border-left:3px solid #a5b890;background:#eff2e7;border-radius:0 8px 8px 0;font-size:13px!important;line-height:1.9}
+.cost-definition{margin-top:22px;padding:19px 22px;border:1px solid #c6d0bc;border-radius:10px;background:#f4f6ee}
+.cost-definition strong{font-size:14px;font-weight:500;line-height:1.8}
+.cost-definition p{font-size:12px!important;color:var(--muted);margin:11px 0 0!important}
+@media(min-width:951px){.featured-card:nth-child(3) .preview-diagram{align-self:start}}
+@media(max-width:1050px) and (min-width:951px){.preview-node{padding:9px}.preview-node strong{font-size:12px}.tool-row{grid-template-columns:.7fr 1fr 1.2fr;gap:17px}}
+@media(max-width:950px){.tool-row{grid-template-columns:.7fr 1.5fr}.tool-work{grid-column:2}.tool-title{grid-row:1 / span 2}.standard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.preview-diagram,.tools-section{scroll-margin-top:24px}.detailed-diagram{padding:18px}.detailed-diagram .logic-check strong,.detailed-diagram .logic-return strong{font-size:11px}.tool-row{grid-template-columns:1fr;gap:12px}.tool-title{grid-row:auto}.tool-work{grid-column:auto}.tool-title h3{font-size:23px}.tool-work p{font-size:13px}.evidence-standard{padding:18px}.case-expand{padding:17px}.flow-explanations article{grid-template-columns:22px 1fr;gap:9px}.flow-explanations h4{font-size:17px}.flow-explanations p{font-size:13px}.stage-contract .case-table th{width:44%}}
+@media(max-width:440px){.preview-diagram{padding:16px}.preview-diagram h4{font-size:15px}.preview-node{padding:9px}.preview-node strong{font-size:12px;padding-right:18px}.preview-node>span{font-size:7px;right:6px}.preview-node small{font-size:10px}.standard-grid{grid-template-columns:1fr;gap:17px}.detailed-diagram .logic-node p{font-size:11px}.detailed-diagram .logic-check strong,.detailed-diagram .logic-return strong{font-size:10px}.detailed-diagram .logic-check>div>span,.detailed-diagram .logic-return>span{font-size:9px}.detailed-diagram .logic-name{font-size:20px}.cost-definition{padding:16px}}

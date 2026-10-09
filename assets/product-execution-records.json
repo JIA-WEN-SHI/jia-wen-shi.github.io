@@ -1,0 +1,138 @@
+{
+  "title": "产品执行与核对记录摘编",
+  "compiledAt": "2026-10-09",
+  "note": "从已有本地验收文档整理。不是客户访谈原件、原始日志或新增商业测试；公开截图保留测试性质。",
+  "records": [
+    {
+      "project": "PM OS",
+      "sourceDate": "2026-10-04",
+      "sourceDocument": "docs/testing/2026-10-04-pmos-all-stage-dialog.md",
+      "kind": "真实模型执行 · 模拟业务材料",
+      "observations": [
+        [
+          "输入",
+          "1 份已验收上游报告 + 1 份已确认交接。原材料明确写了场景是假设、没有真实访谈、没有耗时基线。"
+        ],
+        [
+          "首轮错误",
+          "模型把上游报告和交接卡 ID 当成资料库 ID。文字能够生成，但引用类型不合法。"
+        ],
+        [
+          "处理",
+          "采用校验拒绝这份结果；明确引用类型并追问，让模型重新整理。不能把能生成文字等同于方案可采用。"
+        ],
+        [
+          "修正后输出",
+          "约 1,800 字符的完整方案，保留模拟与未测说明；采用后刷新，正文仍保存在阶段输入中。"
+        ]
+      ],
+      "limits": "这条记录验证了真实模型的生成、追问、采用和保存；没有真实客户，也没有实际开展实验、上线或收益验证。",
+      "code": [
+        [
+          "引用与采用校验",
+          "https://github.com/JIA-WEN-SHI/pm-os/blob/main/agent-ui/src/features/pm/discovery-domain.ts"
+        ],
+        [
+          "交接版本规则",
+          "https://github.com/JIA-WEN-SHI/pm-os/blob/main/agent-ui/src/features/pm/handoff-core.ts"
+        ],
+        [
+          "八阶段规则测试",
+          "https://github.com/JIA-WEN-SHI/pm-os/blob/main/agent-ui/tests/pm-all-stage-preparation.test.cjs"
+        ]
+      ]
+    },
+    {
+      "project": "PM OS 交接规则",
+      "sourceDate": "2026-10-03",
+      "sourceDocument": "docs/testing/2026-10-03-pmos-handoff.md",
+      "kind": "隔离浏览器测试，模拟模型响应",
+      "observations": [
+        [
+          "保存交接 v2 草稿",
+          "下一阶段仍使用有效的确认版 v1。",
+          "草稿不改变当前执行依据"
+        ],
+        [
+          "确认交接 v2",
+          "下游输入需重新确认；旧运行仍引用 v1。",
+          "新版本不覆盖历史记录"
+        ],
+        [
+          "上游资料修改",
+          "旧交接需复核，下一阶段生成被阻止。",
+          "变化不能悄悄传递"
+        ]
+      ],
+      "limits": "以上交接场景来自 2026.10.03 隔离浏览器测试，模型使用模拟响应。相邻交接覆盖 S01→S02 至 S07→S08；不是任意依赖图。"
+    },
+    {
+      "project": "EvoContent",
+      "sourceDate": "2026-10-07",
+      "sourceDocument": "docs/superpowers/plans/2026-10-07-manual-publish-content-loop-progress.md",
+      "kind": "本地运行验收 · 未对外发布",
+      "observations": [
+        [
+          "输入",
+          "3 条已采集参考内容被关联为 3 个案例和 3 份素材；重复关联没有增加重复条目。"
+        ],
+        [
+          "处理与输出",
+          "采集编排进入草稿生成，任务到达 pending_review（待人工审核），保存了 4 份依据引用。"
+        ],
+        [
+          "重复操作",
+          "再次生成返回同一任务，reused=true；没有把重复点击当成新产出。"
+        ],
+        [
+          "结束位置",
+          "该生成任务没有发布时间。配图上传、内部审核与撤回另用明确标记的测试草稿验证。"
+        ]
+      ],
+      "failure": [
+        [
+          "发生的问题",
+          "一次评论重试返回 partial / api_error。",
+          "平台访问受限，不能当作“评论为零”"
+        ],
+        [
+          "保留下来的内容",
+          "正文、5 张图片和本地采集包已保存；数据库保存得到确认。",
+          "失败不等于整条素材丢失"
+        ],
+        [
+          "恢复方式",
+          "评论可以单独重试，已有正文与图片保留。",
+          "减少对已完成步骤的重复操作"
+        ]
+      ],
+      "limits": "已证明部分内容任务和控制规则可运行。客户是否采用方案、内容效率和表现是否改善，现有材料不能回答。",
+      "code": [
+        [
+          "草稿编排与重复任务复用",
+          "https://github.com/JIA-WEN-SHI/evocontent-matrix/blob/main/services/api/app/services/cli_content_loop.py"
+        ],
+        [
+          "观察数据与未知值规则",
+          "https://github.com/JIA-WEN-SHI/evocontent-matrix/blob/main/services/api/app/services/task_observations.py"
+        ],
+        [
+          "人工发布登记测试",
+          "https://github.com/JIA-WEN-SHI/evocontent-matrix/blob/main/tests/test_manual_publication.py"
+        ]
+      ]
+    }
+  ],
+  "freshOfflineChecks": {
+    "date": "2026-10-09",
+    "pmos": {
+      "passed": 22,
+      "modelCalls": 0
+    },
+    "evocontent": {
+      "passed": 79,
+      "externalPublications": 0
+    },
+    "meaning": "验证代码规则，不能用作运营 KPI、模型准确率或 ROI"
+  }
+}

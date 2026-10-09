@@ -108,6 +108,16 @@
     if(!x) return '';
     return `<section class="case-section execution-section" id="evidence"><div class="eyebrow">EXECUTION EVIDENCE</div><h2>实际任务与错误记录</h2><div class="evidence-heading"><span>${e(x.type)}</span><time>${e(x.date)}</time></div><h3 class="execution-title">${e(x.title)}</h3><p>${e(x.intro)}</p><dl class="execution-facts">${x.facts.map(([label,text])=>`<div><dt>${e(label)}</dt><dd>${e(text)}</dd></div>`).join('')}</dl><div class="evidence-lesson">${e(x.lesson)}</div><h3 class="case-subheading">${e(x.checksTitle)}</h3>${evidenceTable(x.checks,['动作或问题','实际记录','产品含义'])}<p class="caption">${e(x.checksNote)}</p><figure class="execution-image"><button class="image-button" type="button" data-image="${e(x.image)}" data-caption="${e(x.imageCaption)}" aria-label="放大查看${e(p.name)}验收记录"><img ${imgSize(x.image)} src="${e(x.image)}" alt="${e(x.imageCaption)}" loading="lazy"></button><figcaption>${e(x.imageCaption)}</figcaption></figure><div class="evidence-test"><strong>离线规则核对</strong><p>${e(x.test)}</p></div><div class="evidence-links">${x.sources.map(([label,url])=>`<a href="${e(url)}" target="_blank" rel="noopener noreferrer">${e(label)} ↗</a>`).join('')}<a href="assets/product-execution-records.json" target="_blank" rel="noopener noreferrer">验收记录摘编 ↗</a></div><p class="evidence-boundary">${e(x.scope)}</p></section>`;
   }
+  function businessWorkflow(d) {
+    const w=d.businessWorkflow;
+    if(!w) return '';
+    return `<div class="business-workflow"><h3 class="case-subheading">${e(w.title)}</h3><p>${e(w.lead)}</p>${evidenceTable(w.rows,['环节','原来的方式','本次功能的取舍'])}<p class="caption">${e(w.note)}</p></div>`;
+  }
+  function businessReference(d) {
+    const r=d.businessReference;
+    if(!r) return '';
+    return `<div class="business-reference"><h3 class="case-subheading">${e(r.title)}</h3><p>${e(r.lead)}</p><dl class="business-reference-grid">${r.items.map(([label,value,note])=>`<div><dt>${e(label)}</dt><dd>${e(value)}</dd><p>${e(note)}</p></div>`).join('')}</dl><p class="caption">${e(r.note)}</p><p class="business-version-note">${e(r.versionNote)}</p></div>`;
+  }
   function coreGoal(d) {
     const c=d.coreGoal;
     if(!c) return '';
@@ -142,14 +152,14 @@
     const sections=[['overview','为什么做这个项目'],['problem','问题与范围'],['decisions','我做的关键选择'],['showcase',d.lifecycle?'完整八阶段方法':'流程与处理方式'],...(d.technical?[['technical','技术方案与取舍']]:[]),...(d.execution?[['evidence','实际任务与错误记录']]:[]),['implementation','职责与实现范围'],...(d.evaluationDesign?[['evaluation','评测口径与验证范围']]:[]),['result','交付与验证']];
     return `<section class="detail-hero"><div class="breadcrumb"><a href="#featured">作品集</a> / ${e(p.name)}</div><div class="eyebrow">CASE ${e(p.number)} / ${e(p.en)}</div><h1>${e(p.name)}</h1><p class="detail-subtitle">${e(p.statement)}</p><div class="facts"><div class="fact"><small>当前阶段</small><p>${e(p.stage)}</p></div><div class="fact"><small>我的角色</small><p>${e(p.role)}</p></div></div><p class="project-evidence">${e(p.evidence)}</p>${coreGoal(d)}${externalLinks(p)}<p class="caption">${e(p.demoScope)}</p></section>${video(p)}<div class="case-grid"><nav class="case-nav" aria-label="案例目录">${p.video ? `<a href="#case-${p.id}/video">方案演示视频</a>` : ''}${sections.map((s,i)=>`<a href="#case-${p.id}/${s[0]}">${String(i+1).padStart(2,'0')} · ${s[1]}</a>`).join('')}</nav><div>
     <section class="case-section" id="overview"><div class="eyebrow">01 / BACKGROUND</div><h2>${e(sections[0][1])}</h2>${(d.intro||[p.summary]).map(text=>`<p>${e(text)}</p>`).join('')}${demoGuide(p)}</section>
-    <section class="case-section" id="problem"><div class="eyebrow">02 / PROBLEM & SCOPE</div><h2>${e(sections[1][1])}</h2><p>${e(p.problem)}</p>${contextCards(d.contexts)}</section>
+    <section class="case-section" id="problem"><div class="eyebrow">02 / PROBLEM & SCOPE</div><h2>${e(sections[1][1])}</h2><p>${e(p.problem)}</p>${contextCards(d.contexts)}${businessWorkflow(d)}</section>
     <section class="case-section" id="decisions"><div class="eyebrow">03 / PRODUCT DECISIONS</div><h2>${e(sections[2][1])}</h2>${productDecisions(p,d)}</section>
     <section class="case-section" id="showcase"><div class="eyebrow">04 / METHOD & WORKFLOW</div><h2>${e(sections[3][1])}</h2>${caseWorkflow(p,d)}</section>
     ${technicalAnalysis(p,d)}
     ${executionEvidence(p,d)}
     <section class="case-section" id="implementation"><div class="eyebrow">ROLE & IMPLEMENTATION</div><h2>职责与实现范围</h2><p>${e(p.implementation)}</p>${d.agentToolNote?`<div class="case-agent-tool">${agentToolCard(d.agentToolNote)}</div>`:''}</section>
     ${evaluationDesign(d)}
-    <section class="case-section" id="result"><div class="eyebrow">DELIVERY & VALIDATION</div><h2>交付与验证</h2><p>${e(p.outcome)}</p>${evidenceTable(d.results,['产出','当前状态','能说明什么'])}<div class="case-return"><a class="text-link" href="#featured">返回主案例 ↗</a><a class="text-link" href="#projects">查看更多项目 ↗</a></div></section>
+    <section class="case-section" id="result"><div class="eyebrow">DELIVERY & VALIDATION</div><h2>交付与验证</h2><p>${e(p.outcome)}</p>${businessReference(d)}${evidenceTable(d.results,['产出','当前状态','能说明什么'])}<div class="case-return"><a class="text-link" href="#featured">返回主案例 ↗</a><a class="text-link" href="#projects">查看更多项目 ↗</a></div></section>
     </div></div>`;
   }
   function resume() {

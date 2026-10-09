@@ -27,8 +27,15 @@
     const d=f.diagram, v=data.flowPreviews[p.id];
     return `<figure class="feature-diagram preview-diagram" id="flow-${e(p.id)}" aria-label="${e(p.name)}流程摘要"><div class="diagram-title"><span>${e(f.label)}</span><a href="${link(p)}/showcase" aria-label="查看${e(p.name)}完整流程">↗</a></div><h4>${e(v.title)}</h4><div class="preview-legend">${d.legend.map(([kind,label])=>`<span><i class="kind-${e(kind)}" aria-hidden="true"></i>${e(label)}</span>`).join('')}</div><div class="preview-rows">${d.rows.map((r,i)=>`<div class="preview-pair ${r.join==='parallel'?'preview-parallel':''}">${r.nodes.map((n,j)=>`<div class="preview-node kind-${e(n.kind)} ${n.pending?'logic-pending':''}"><span>${e(n.number)}</span><strong>${e(n.title)}</strong><small>${e(v.subtitles[i*2+j])}</small></div>`).join('')}${r.join==='parallel'?'<span class="preview-merge" aria-hidden="true">＋</span>':'<span class="preview-arrow" aria-hidden="true">→</span>'}</div>${i<3?`<div class="preview-gate"><span aria-hidden="true">↓</span>${e(v.gates[i])}</div>`:''}`).join('')}</div><div class="preview-note">${e(v.note)}</div><figcaption class="preview-scope">${e(v.scope)}</figcaption><a class="preview-link" href="${link(p)}/showcase">完整流程、分支与解释 <span>↗</span></a></figure>`;
   }
+  function agentToolCard(item) {
+    return `<article><small>${e(item.status)}</small><h3>${e(item.title)}</h3><p>${e(item.text)}</p><p class="agent-tool-scope">${e(item.scope)}</p><div class="agent-tool-links"><a href="${e(item.link[1])}">${e(item.link[0])} ↗</a><a href="${e(item.source[1])}" target="_blank" rel="noopener noreferrer">${e(item.source[0])} ↗</a></div></article>`;
+  }
+  function agentToolPractice() {
+    const a=data.agentToolPractice;
+    return `<details class="agent-tool-practice" id="tools-integration"><summary>Skill、MCP 与自动化：我实际怎么用</summary><div class="agent-tool-usage">${a.usage.map(u=>`<article><small>${e(u.label)}</small><h3>${e(u.title)}</h3><p>${e(u.text)}</p></article>`).join('')}</div><h3 class="agent-tool-heading">项目代码里能看到什么</h3><p class="agent-tool-definition">${e(a.definition)} ${a.references.map(([label,url])=>`<a href="${e(url)}" target="_blank" rel="noopener noreferrer">${e(label)} ↗</a>`).join(' · ')}</p><div class="agent-tool-grid">${a.items.map(agentToolCard).join('')}</div></details>`;
+  }
   function toolsSection() {
-    return `<section class="section tools-section" id="tools"><div class="section-heading"><div><div class="eyebrow">TOOLS & PRACTICE</div><h2>使用的工具与实践。</h2></div><p>按任务整理工具使用经历。具体项目的工具链、职责和验证范围，可以在对应案例中查看。</p></div><div class="tools-list">${data.toolsUsed.map((t,i)=>`<article class="tool-row"><div class="tool-title"><small>0${i+1}</small><h3>${e(t.title)}</h3></div><div class="tool-names">${t.names.map(n=>`<span>${e(n)}</span>`).join('')}</div><div class="tool-work"><p>${e(t.text)}</p><a href="${e(t.link[1])}">${e(t.link[0])} ↗</a></div></article>`).join('')}</div><details class="evidence-standard"><summary>案例如何提供依据：背景、决策、执行、失败、评测与复盘</summary><div class="standard-grid">${data.evidenceStandards.map(([title,text,url])=>`<article><h3>${e(title)}</h3><p>${e(text)}</p><a href="${e(url)}">对应案例 ↗</a></article>`).join('')}</div><div class="model-evaluation-design"><h3>模型对比的评测口径</h3><p>这是评测设计，尚未作为已完成的独立 Benchmark 展示。以人物一致性、动作、镜头控制和参考图遵循为任务，用可比较的输入重复生成，保留全部结果和失败样例。</p><p>起步方案：4 类任务 × 2 个模型 × 2 次重复，共 16 次生成。记录指令遵循、时序一致性、运动合理性、一次可用率、重试次数与可用素材成本；小样本结论限定在具体场景。</p></div></details></section>`;
+    return `<section class="section tools-section" id="tools"><div class="section-heading"><div><div class="eyebrow">TOOLS & PRACTICE</div><h2>使用的工具与实践。</h2></div><p>按任务整理工具使用经历。具体项目的工具链、职责和验证范围，可以在对应案例中查看。</p></div><div class="tools-list">${data.toolsUsed.map((t,i)=>`<article class="tool-row"><div class="tool-title"><small>0${i+1}</small><h3>${e(t.title)}</h3></div><div class="tool-names">${t.names.map(n=>`<span>${e(n)}</span>`).join('')}</div><div class="tool-work"><p>${e(t.text)}</p><a href="${e(t.link[1])}">${e(t.link[0])} ↗</a></div></article>`).join('')}</div>${agentToolPractice()}<details class="evidence-standard"><summary>案例如何提供依据：背景、决策、执行、失败、评测与复盘</summary><div class="standard-grid">${data.evidenceStandards.map(([title,text,url])=>`<article><h3>${e(title)}</h3><p>${e(text)}</p><a href="${e(url)}">对应案例 ↗</a></article>`).join('')}</div><div class="model-evaluation-design"><h3>模型对比的评测口径</h3><p>这是评测设计，尚未作为已完成的独立 Benchmark 展示。以人物一致性、动作、镜头控制和参考图遵循为任务，用可比较的输入重复生成，保留全部结果和失败样例。</p><p>起步方案：4 类任务 × 2 个模型 × 2 次重复，共 16 次生成。记录指令遵循、时序一致性、运动合理性、一次可用率、重试次数与可用素材成本；小样本结论限定在具体场景。</p></div></details></section>`;
   }
   function featuredCard(p) {
     const f = data.featuredFlows[p.id];
@@ -125,7 +132,7 @@
     <section class="case-section" id="showcase"><div class="eyebrow">04 / METHOD & WORKFLOW</div><h2>${e(sections[3][1])}</h2>${caseWorkflow(p,d)}</section>
     ${technicalAnalysis(p,d)}
     ${executionEvidence(p,d)}
-    <section class="case-section" id="implementation"><div class="eyebrow">ROLE & IMPLEMENTATION</div><h2>职责与实现范围</h2><p>${e(p.implementation)}</p></section>
+    <section class="case-section" id="implementation"><div class="eyebrow">ROLE & IMPLEMENTATION</div><h2>职责与实现范围</h2><p>${e(p.implementation)}</p>${d.agentToolNote?`<div class="case-agent-tool">${agentToolCard(d.agentToolNote)}</div>`:''}</section>
     ${evaluationDesign(d)}
     <section class="case-section" id="result"><div class="eyebrow">DELIVERY & VALIDATION</div><h2>交付与验证</h2><p>${e(p.outcome)}</p>${evidenceTable(d.results,['产出','当前状态','能说明什么'])}<div class="case-return"><a class="text-link" href="#featured">返回主案例 ↗</a><a class="text-link" href="#projects">查看更多项目 ↗</a></div></section>
     </div></div>`;
@@ -161,7 +168,7 @@
     if(view==='home' && section==='projects') filterLibrary('all');
     requestAnimationFrame(()=> {
       const target=section && document.getElementById(section);
-      if(target) target.scrollIntoView({behavior:'instant',block:'start'});
+      if(target) { if(target.tagName==='DETAILS') target.open=true; target.scrollIntoView({behavior:'instant',block:'start'}); }
       else if(changed) {window.scrollTo({top:0,left:0,behavior:'instant'});main.focus({preventScroll:true});}
     });
   }

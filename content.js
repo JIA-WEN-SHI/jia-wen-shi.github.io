@@ -2414,3 +2414,120 @@ window.PORTFOLIO.caseDetails.pmos.stageContract = {
   "source": "https://github.com/JIA-WEN-SHI/pm-os/blob/main/agent-ui/src/features/pm/model.ts",
   "note": "运行前还固定资料、报告、方法与交接快照。上游变化需要重新核对；历史版本保留不等于整套系统已经自动回滚。"
 };
+
+// Skill/MCP usage is separate from the verified integration status of each project.
+window.PORTFOLIO.toolsUsed.splice(2, 0, {
+  "title": "Skill 与产品方法",
+  "names": [
+    "Agent Skills",
+    "Superpowers",
+    "GrillMe",
+    "pm-skill"
+  ],
+  "text": "编写内容 Skill 沉淀方法；用 Superpowers、GrillMe 做开发需求挖掘，用 pm-skill 辅助产品梳理。",
+  "link": [
+    "查看 Skill 的具体用法",
+    "#tools-integration"
+  ]
+},
+{
+  "title": "信息采集与工具连接",
+  "names": [
+    "n8n",
+    "MCP",
+    "Supabase"
+  ],
+  "text": "用 n8n 采集信息；通过 MCP 连接过微信发布工具与 Supabase，辅助开发。",
+  "link": [
+    "查看 MCP 与自动化实践",
+    "#tools-integration"
+  ]
+});
+window.PORTFOLIO.agentToolPractice = {
+  "definition": "Skill 将任务说明、工作步骤与参考资源组织成可复用方法；MCP 连接外部工具与数据。方法、接口和产出确认分别安排。",
+  "references": [
+    [
+      "Agent Skills 官方说明",
+      "https://agentskills.io/home"
+    ],
+    [
+      "MCP 官方说明",
+      "https://modelcontextprotocol.io/specification/draft/server/index"
+    ]
+  ],
+  "items": [
+    {
+      "title": "阶段方法怎样进入 Agent 任务",
+      "status": "PM OS · 已有方法上下文机制",
+      "text": "方法对象保存名称、适用阶段、说明和版本。运行前把选中的方法与资料、报告、交接一起固定到输入快照，便于回查本次任务采用了哪一版方法。",
+      "scope": "当前实现是方法说明与版本管理，固定每次任务采用的方法上下文。这里展示 PM OS 自己的阶段机制，标准 Skill 的使用经历见工具层。",
+      "source": [
+        "查看方法与快照代码",
+        "https://github.com/JIA-WEN-SHI/pm-os/blob/main/agent-ui/src/features/pm/context-domain.ts"
+      ],
+      "link": [
+        "完整阶段与交接说明",
+        "#case-pmos/showcase"
+      ]
+    },
+    {
+      "title": "外部工具接入怎样限定范围",
+      "status": "EvoContent · 工程保留只读 MCP 适配",
+      "text": "工程保留小红书只读适配，包含工具参数、返回格式与错误处理；写入和代发关闭。读取结果还要进入任务、来源和审核流程。",
+      "scope": "已记录的实际内容链使用 CLI 采集。MCP 适配的运行与效果需单独验证，公开 Demo 不连接真实 MCP 服务。",
+      "source": [
+        "查看只读 MCP 适配代码",
+        "https://github.com/JIA-WEN-SHI/evocontent-matrix/blob/main/services/agent/app/tools/integrations/xhs_mcp_readonly.py"
+      ],
+      "link": [
+        "实际任务与处理记录",
+        "#case-evocontent/evidence"
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "title": "内容方法沉淀",
+      "label": "自己编写的内容 Skill",
+      "text": "在自己的内容项目中编写过 Skill，将内容工作的经验整理成可以继续使用的方法。"
+    },
+    {
+      "title": "开发与产品需求梳理",
+      "label": "Superpowers · GrillMe · pm-skill",
+      "text": "开发前用 Superpowers、GrillMe 做需求挖掘；用 pm-skill 辅助按产品方法梳理问题和方案。"
+    },
+    {
+      "title": "信息采集与工具连接",
+      "label": "n8n · MCP · Supabase",
+      "text": "用 n8n 做信息采集；通过 MCP 连接过微信发布相关工具和 Supabase，辅助开发。"
+    }
+  ]
+};
+window.PORTFOLIO.caseDetails.pmos.agentToolNote = {
+  "title": "阶段方法怎样进入 Agent 任务",
+  "status": "PM OS · 已有方法上下文机制",
+  "text": "方法对象保存名称、适用阶段、说明和版本。运行前把选中的方法与资料、报告、交接一起固定到输入快照，便于回查本次任务采用了哪一版方法。",
+  "scope": "当前实现是方法说明与版本管理，固定每次任务采用的方法上下文。这里展示 PM OS 自己的阶段机制，标准 Skill 的使用经历见工具层。",
+  "source": [
+    "查看方法与快照代码",
+    "https://github.com/JIA-WEN-SHI/pm-os/blob/main/agent-ui/src/features/pm/context-domain.ts"
+  ],
+  "link": [
+    "完整阶段与交接说明",
+    "#case-pmos/showcase"
+  ]
+};
+window.PORTFOLIO.caseDetails.evocontent.agentToolNote = {
+  "title": "外部工具接入怎样限定范围",
+  "status": "EvoContent · 工程保留只读 MCP 适配",
+  "text": "工程保留小红书只读适配，包含工具参数、返回格式与错误处理；写入和代发关闭。读取结果还要进入任务、来源和审核流程。",
+  "scope": "已记录的实际内容链使用 CLI 采集。MCP 适配的运行与效果需单独验证，公开 Demo 不连接真实 MCP 服务。",
+  "source": [
+    "查看只读 MCP 适配代码",
+    "https://github.com/JIA-WEN-SHI/evocontent-matrix/blob/main/services/agent/app/tools/integrations/xhs_mcp_readonly.py"
+  ],
+  "link": [
+    "实际任务与处理记录",
+    "#case-evocontent/evidence"
+  ]
+};

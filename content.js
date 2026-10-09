@@ -77,7 +77,464 @@ window.PORTFOLIO = {
     "pmos",
     "carpet"
 ],
-  featuredFlows: {"evocontent": {"label": "CONTENT OPERATIONS / 从账号策略到内容复盘", "nodes": [["账号策略", "分层 · 人设 · 任务"], ["内容准备", "参考 · 选题 · 草稿"], ["人工审核", "修改 · 确认 · 发布"], ["反馈与 SOP", "观察 · 建议 · 采纳"]], "outputs": ["账号档案", "可编辑草稿", "已审核稿件", "策略版本"], "note": "人工发布 · SOP 调整先确认，再生效", "controls": ["来源随草稿保留", "缺失指标保持未知", "策略旧版可回查"], "summary": "业务方案已交付，由需求方自行开发。我另行实现 EvoContent，重点处理账号策略、审核和发布反馈；客户后续成果与个人平台分别记录。"}, "pmos": {"label": "AI PRODUCT WORKSPACE / 产品工作的完整路径", "nodes": [["发现与定义", "资料 · 流程 · 核心问题"], ["可行性与方案", "AI 分工 · 范围 · 验收"], ["实验与交付", "原型 · 评估 · 跟踪"], ["复盘与复用", "决策 · 方法 · 适用条件"]], "outputs": ["问题与依据", "方案与验收条件", "结果与交付包", "方法更新候选"], "note": "八阶段方法 · 各自产出，经核对后交接", "controls": ["任务限定当前阶段", "依据绑定具体版本", "上游变化重新核对"], "summary": "我把产品工作拆成八个阶段。每一步先说明要解决什么、需要什么材料、怎样判断完成，再让 Agent 辅助执行，并留下下一步能继续使用的结果。"}, "carpet": {"label": "PRODUCT IMAGE EDITING / 保留商品，调整展示", "nodes": [["输入与用途", "商品原图 · 场景参考"], ["编辑要求", "构图 · 光线 · 商品约束"], ["候选检查", "对照原图 · 记录修改"], ["版本与交付", "选择候选 · 整理输出"]], "outputs": ["商品与参考素材", "任务提示词快照", "候选结果与问题", "选定版本"], "note": "我负责产品流程与前端 · 后端由技术方开发", "controls": ["商品不能随场景改变", "任务失败明确返回", "效果由实际图像核对"], "summary": "从天津地毯电商同事的商品图需求出发，把原图、场景参考、修改要求和候选检查组织成工作流程。现有工程以单张场景首图为主，新平台仍在开发，尚未向需求方展示。"}},
+  featuredFlows: {
+    "evocontent": {
+      "label": "CONTENT OPERATIONS / 从账号策略到内容复盘",
+      "summary": "业务方案已交付，由需求方自行开发。我另行实现 EvoContent，重点处理账号策略、审核和发布反馈；客户后续成果与个人平台分别记录。",
+      "diagram": {
+        "heading": "从草稿到策略更新，每次推进都有条件",
+        "legend": [
+          [
+            "rule",
+            "规则检查"
+          ],
+          [
+            "ai",
+            "AI 建议"
+          ],
+          [
+            "human",
+            "人工决定"
+          ]
+        ],
+        "pendingLabel": "虚线：待真实运营验证",
+        "rows": [
+          {
+            "nodes": [
+              {
+                "number": "01",
+                "title": "账号与任务范围",
+                "detail": "分层、人设、当前周期；限定本次任务对象",
+                "output": "账号策略 / 任务范围",
+                "kind": "rule",
+                "pending": false
+              },
+              {
+                "number": "02",
+                "title": "参考资料与来源",
+                "detail": "公共热点与账号资料；正文、图片、评论分别记录",
+                "output": "来源引用 / 采集状态",
+                "kind": "rule",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "输入与采集条件齐备？",
+              "forward": "齐备 → 创建草稿任务",
+              "branch": "缺资料或采集异常",
+              "target": "补资料；评论单独重试",
+              "pending": false
+            },
+            "join": "next",
+            "edge": "按账号筛选"
+          },
+          {
+            "nodes": [
+              {
+                "number": "03",
+                "title": "AI 生成可编辑草稿",
+                "detail": "保留来源；同一执行键复用原任务",
+                "output": "task ID / pending_review",
+                "kind": "ai",
+                "pending": false
+              },
+              {
+                "number": "04",
+                "title": "人工审核内容",
+                "detail": "修改稿件，核对事实、人设和配图",
+                "output": "审核结果 / 草稿版本",
+                "kind": "human",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "当前稿件审核通过？",
+              "forward": "通过 → 保留发布资格",
+              "branch": "未通过，或审核后配图变更",
+              "target": "↩ 回 03 / 04，重新审核",
+              "pending": false
+            },
+            "join": "next",
+            "edge": "提交审核"
+          },
+          {
+            "nodes": [
+              {
+                "number": "05",
+                "title": "人工发布与登记",
+                "detail": "人工操作发布；登记链接、账号与发布时间",
+                "output": "发布身份 / 内容链接",
+                "kind": "human",
+                "pending": true
+              },
+              {
+                "number": "06",
+                "title": "记录内容反馈",
+                "detail": "保留指标来源和观察时间；缺失数据记为未知",
+                "output": "观察记录 / 已知指标",
+                "kind": "rule",
+                "pending": true
+              }
+            ],
+            "checkpoint": {
+              "question": "已有依据能支持调整？",
+              "forward": "依据足够 → 提出 SOP 建议",
+              "branch": "指标缺失或依据不足",
+              "target": "继续观察，不补造数据",
+              "pending": true
+            },
+            "join": "next",
+            "edge": "发布后观察"
+          },
+          {
+            "nodes": [
+              {
+                "number": "07",
+                "title": "提出 SOP 更新建议",
+                "detail": "把依据与修改理由关联到候选策略",
+                "output": "pending / 策略候选",
+                "kind": "ai",
+                "pending": true
+              },
+              {
+                "number": "08",
+                "title": "人工确认策略变更",
+                "detail": "确认是否采纳；核对候选与当前版本",
+                "output": "确认记录 / 版本检查",
+                "kind": "human",
+                "pending": true
+              }
+            ],
+            "checkpoint": {
+              "question": "确认且版本检查通过？",
+              "forward": "通过 → 启用新策略版本",
+              "branch": "暂缓、拒绝或版本已变化",
+              "target": "保留旧策略；重新核对",
+              "pending": true
+            },
+            "join": "next",
+            "edge": "提交确认"
+          }
+        ],
+        "loop": [
+          "↻ 下一轮沿用已确认策略",
+          "策略更新回到 01；旧版与确认记录保留，建议不会自动生效。"
+        ],
+        "records": [
+          "任务与来源",
+          "草稿与审核",
+          "观察与策略版本"
+        ],
+        "scope": "草稿链已有实际运行记录；发布、反馈与 SOP 是已有工程路径，尚未完成真实运营闭环。"
+      }
+    },
+    "pmos": {
+      "label": "AI PRODUCT WORKSPACE / 产品工作的完整路径",
+      "summary": "我把产品工作拆成八个阶段。每一步先说明要解决什么、需要什么材料、怎样判断完成，再让 Agent 辅助执行，并留下下一步能继续使用的结果。",
+      "diagram": {
+        "heading": "八阶段产品方法，产出确认后再交接",
+        "legend": [
+          [
+            "method",
+            "阶段方法"
+          ],
+          [
+            "human",
+            "人工确认"
+          ]
+        ],
+        "rows": [
+          {
+            "nodes": [
+              {
+                "number": "S01",
+                "title": "发现与研究",
+                "detail": "梳理资料；区分原话、观察与假设",
+                "output": "研究问题 / 来源清单",
+                "kind": "method",
+                "pending": false
+              },
+              {
+                "number": "S02",
+                "title": "定义与拆解",
+                "detail": "拆原有流程；定位问题，限定第一版范围",
+                "output": "核心问题 / 范围",
+                "kind": "method",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "问题与范围是否明确？",
+              "forward": "明确 → 比较实现方式",
+              "branch": "资料不足或问题仍模糊",
+              "target": "↩ 回 S01 / S02 补依据",
+              "pending": false
+            },
+            "join": "next",
+            "edge": "确认后交接"
+          },
+          {
+            "nodes": [
+              {
+                "number": "S03",
+                "title": "AI 机会与可行性",
+                "detail": "比较数据、可检查性、错误代价与成本",
+                "output": "AI / 规则 / 人工分工",
+                "kind": "method",
+                "pending": false
+              },
+              {
+                "number": "S04",
+                "title": "方案与产品定义",
+                "detail": "定义对象、状态、MVP 和验收条件",
+                "output": "产品方案 / 验收标准",
+                "kind": "method",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "方案有可检查的验收条件？",
+              "forward": "有 → 安排原型与实验",
+              "branch": "边界或验收条件不清楚",
+              "target": "↩ 回 S03 / S04 调整",
+              "pending": false
+            },
+            "join": "next",
+            "edge": "确认后交接"
+          },
+          {
+            "nodes": [
+              {
+                "number": "S05",
+                "title": "原型与实验",
+                "detail": "先定样本和步骤；计划与实际结果分开",
+                "output": "原型 / 实际观察",
+                "kind": "method",
+                "pending": false
+              },
+              {
+                "number": "S06",
+                "title": "评估与迭代",
+                "detail": "回查失败输入；分别判断能力、工程与价值",
+                "output": "评估结论 / 迭代决定",
+                "kind": "method",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "结果有依据且满足要求？",
+              "forward": "满足 → 整理交付范围",
+              "branch": "不通过或证据不足",
+              "target": "补实验；必要时回 S04",
+              "pending": false
+            },
+            "join": "next",
+            "edge": "确认后交接"
+          },
+          {
+            "nodes": [
+              {
+                "number": "S07",
+                "title": "交付与效果跟踪",
+                "detail": "说明交付版本、已知问题与指标来源",
+                "output": "交付包 / 跟踪计划",
+                "kind": "method",
+                "pending": false
+              },
+              {
+                "number": "S08",
+                "title": "复盘与知识沉淀",
+                "detail": "保留决策变化；写清方法的适用条件",
+                "output": "复盘 / 方法候选",
+                "kind": "method",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "经验是否适合沉淀为方法？",
+              "forward": "适合 → 保留方法候选",
+              "branch": "只有单次经验或效果未知",
+              "target": "保留限制，继续检验",
+              "pending": false
+            },
+            "join": "next",
+            "edge": "确认后交接"
+          }
+        ],
+        "contract": {
+          "title": "每阶段共用的执行与交接约束",
+          "steps": [
+            "输入版本快照",
+            "Agent 阶段建议",
+            "引用与范围检查",
+            "人工采用方案",
+            "确认报告",
+            "结构化交接"
+          ]
+        },
+        "loop": [
+          "↩ 上游变化，后续交接重新核对",
+          "来源、报告或交接版本改变时，旧确认不覆盖新输入；历史版本保留。"
+        ],
+        "records": [
+          "来源版本",
+          "报告版本",
+          "交接版本"
+        ],
+        "scope": "八阶段展示产品方法与系统框架；真实模型记录目前为 S02，使用模拟业务材料，未完成八阶段真实业务验证。"
+      }
+    },
+    "carpet": {
+      "label": "PRODUCT IMAGE EDITING / 保留商品，调整展示",
+      "summary": "从天津地毯电商同事的商品图需求出发，把原图、场景参考、修改要求和候选检查组织成工作流程。现有工程以单张场景首图为主，新平台仍在开发，尚未向需求方展示。",
+      "diagram": {
+        "heading": "商品保持不变，场景编辑逐步验收",
+        "legend": [
+          [
+            "rule",
+            "规则 / 接口"
+          ],
+          [
+            "ai",
+            "图像模型"
+          ],
+          [
+            "human",
+            "人工检查"
+          ]
+        ],
+        "pendingLabel": "虚线：人工验收设计",
+        "rows": [
+          {
+            "nodes": [
+              {
+                "number": "01",
+                "title": "商品原图",
+                "detail": "颜色、材质、纹样和样式的唯一依据",
+                "output": "商品素材 / project ID",
+                "kind": "rule",
+                "pending": false
+              },
+              {
+                "number": "02",
+                "title": "场景参考",
+                "detail": "借鉴构图、光线与空间；不替换商品本身",
+                "output": "场景素材 / 用途",
+                "kind": "rule",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "素材归属与上传状态有效？",
+              "forward": "有效 → 组织编辑要求",
+              "branch": "素材未上传完或项目不匹配",
+              "target": "修正输入，拒绝创建任务",
+              "pending": false
+            },
+            "join": "parallel",
+            "edge": "两路输入"
+          },
+          {
+            "nodes": [
+              {
+                "number": "03",
+                "title": "组织编辑要求",
+                "detail": "模板参数可调整；手动改写不被模板覆盖",
+                "output": "可编辑 Prompt / 参数",
+                "kind": "rule",
+                "pending": false
+              },
+              {
+                "number": "04",
+                "title": "创建任务与快照",
+                "detail": "保存本次输入；前端阻止处理中重复提交",
+                "output": "job ID / queued",
+                "kind": "rule",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "任务是否创建成功？",
+              "forward": "成功 → 后台领取任务",
+              "branch": "创建请求失败",
+              "target": "显示错误，修正后再提交",
+              "pending": false
+            },
+            "join": "next",
+            "edge": "确认后提交"
+          },
+          {
+            "nodes": [
+              {
+                "number": "05",
+                "title": "调用图像编辑接口",
+                "detail": "进入 processing；商品图在前、场景图在后",
+                "output": "接口结果 / 耗时",
+                "kind": "ai",
+                "pending": false
+              },
+              {
+                "number": "06",
+                "title": "检查返回文件",
+                "detail": "检查格式与尺寸；有效文件才保存结果",
+                "output": "图片资产 / 结果状态",
+                "kind": "rule",
+                "pending": false
+              }
+            ],
+            "checkpoint": {
+              "question": "接口成功且图片文件有效？",
+              "forward": "有效 → succeeded，返回候选",
+              "branch": "超时、接口失败或文件无效",
+              "target": "failed；记录原因，不算成功",
+              "pending": false
+            },
+            "join": "next",
+            "edge": "返回后检查"
+          },
+          {
+            "nodes": [
+              {
+                "number": "07",
+                "title": "展示候选与任务记录",
+                "detail": "查看生成图片、输入快照与任务状态",
+                "output": "候选图 / 执行记录",
+                "kind": "rule",
+                "pending": false
+              },
+              {
+                "number": "08",
+                "title": "人工核对商品",
+                "detail": "对照原图检查颜色、材质、纹样和主图用途",
+                "output": "检查意见 / 验收设计",
+                "kind": "human",
+                "pending": true
+              }
+            ],
+            "checkpoint": {
+              "question": "商品一致性与展示用途达标？",
+              "forward": "达标 → 选定候选用于输出",
+              "branch": "商品变形或展示不合适",
+              "target": "↩ 回 03，调整后新建任务",
+              "pending": true
+            },
+            "join": "next",
+            "edge": "对照商品原图"
+          }
+        ],
+        "loop": [
+          "↩ 修改用于下一次任务",
+          "原任务的输入快照保留；文件校验通过，也仍需人工检查商品是否改变。"
+        ],
+        "records": [
+          "输入与 Prompt",
+          "任务状态",
+          "候选与错误原因"
+        ],
+        "scope": "我负责产品流程与前端，后端由技术方开发。现有工程聚焦单张场景首图；人工商品验收待实际图片案例验证。"
+      }
+    }
+  },
   systemLayers: [
     {
         "name": "业务目标层",

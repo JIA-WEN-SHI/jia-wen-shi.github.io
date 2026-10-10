@@ -1284,7 +1284,7 @@ window.PORTFOLIO.caseDetails = {
         "换参考、角度或 SKU 后重新确认相应输入；旧融合不直接沿用。本浏览器保留当前演示进度和最近一次主动保存的首图，不是完整历史作品库。"
       ]
     ],
-    "mechanismNote": "场景与融合的公开演示读取预制图片，提示词修改会保留，但不会实时重绘。后端另有任务与存储结构，接口采用 gpt-image-2 请求参数；接入记录不等于真实双图稳定性和图像质量已验收。后端由技术方负责。",
+    "mechanismNote": "实际制作使用 Image 2.0，场景与融合的提示词由我按结果手动调整。公开演示读取预制图片，编辑内容会保留，但不会实时重绘；后端的任务、接口与存储由技术方负责。最新接入记录仍需真实任务核对稳定性与图像质量。",
     "results": [
       [
         "流程与前端",
@@ -1600,8 +1600,8 @@ window.PORTFOLIO.caseDetails = {
 window.PORTFOLIO.capabilityEvidence = [
   {
     "title": "理解制作方法，判断技术边界",
-    "tools": "Photoshop / 3ds Max / ComfyUI / 图像编辑",
-    "text": "将地毯渲染与控图经验用于商品图方案，按任务约束比较生产路径，分别检查文件可用性与商品一致性。",
+    "tools": "Image 2.0 / Photoshop / 3ds Max",
+    "text": "基于地毯制作经验，用 Image 2.0 进行场景调整与商品融合，按画面结果手动修改提示词，分别检查图片文件和商品表现。",
     "links": [
       [
         "看生产方式的取舍",
@@ -1973,7 +1973,7 @@ window.PORTFOLIO.caseDetails.carpet.technical = {
       "成功返回，人工检查商品"
     ]
   ],
-  "architectureNote": "这五步说明单张融合的后端路径，三张场景的比较与采用在之前。JMR 适配器使用 gpt-image-2 请求参数；完整案例记录过路径 404 和部分输入 422，稳定真实双图生成与模型效果仍需专项验证。",
+  "architectureNote": "这五步说明 Image 2.0 单张融合的后端路径，三张场景的比较与采用在之前。接口由技术方通过 JMR 适配器接入；完整案例记录过路径 404 和部分输入 422，最新接入的稳定性与生成效果仍需真实任务验证。",
   "objects": [
     [
       "商品素材与参考素材",
@@ -2000,7 +2000,7 @@ window.PORTFOLIO.caseDetails.carpet.technical = {
     },
     {
       "title": "场景与融合提示词分别编辑",
-      "implementation": "公开工作台将两段提示词独立编辑、分别恢复模板；后端也有结构化参数与 promptSnapshot。前端的提示词修改会保留，当前演示图片仍从预制素材读取。",
+      "implementation": "我将场景和融合要求拆成两段提示词，根据每轮画面手动调整。公开工作台分别提供编辑和恢复模板入口；后端用 promptSnapshot 记录本次请求要求，演示图片仍从预制素材读取。",
       "reason": "先调整空间、构图和搭配，再处理商品融合，便于定位结果问题。已确认任务的输入与后续修改分开。",
       "limit": "提示词可编辑不等于当前演示能实时重绘；实际控制效果要通过真实候选图检查。"
     },
@@ -2635,7 +2635,7 @@ window.PORTFOLIO.caseDetails.carpet.coreGoal = {
   ]
 };
 window.PORTFOLIO.caseDetails.carpet.productionChoice = {
-  "lead": "过往地毯渲染、Photoshop 和 ComfyUI / Redux 控图经验，是我理解任务约束的基础。当前平台使用图像编辑接口；这些制作经验与现有平台依赖分别说明。",
+  "lead": "这个项目使用 Image 2.0 做图像编辑。我先根据商品原图与参考确定场景和融合要求，再看生成结果，手动调整提示词并重新生成。传统渲染经验用于判断材质、光线与构图。",
   "rows": [
     [
       "传统渲染 → Photoshop 后期",
@@ -2643,14 +2643,14 @@ window.PORTFOLIO.caseDetails.carpet.productionChoice = {
       "本人提供的传统流程是一套三张，最低报价 100 元。当前接口单价约 0.5 元一次，两者覆盖的工作与费用范围不同。"
     ],
     [
-      "商品原图 + 场景参考 → AI 编辑",
+      "商品原图 + 已采用场景 → Image 2.0",
       "已有商品与已选参考的首图任务，先从三个角度采用一个场景，再让商品原图与该场景共同输入，生成一张候选首图。",
-      "后端使用 gpt-image-2 请求参数与 JMR 适配器，已有接入和输入兼容探索；稳定真实双图生成仍需验证，没有模型横评结论。"
+      "图像生成使用 Image 2.0，后端接口由技术方接入。当前公开版用预制图片演示；最新接口接入的稳定性仍需真实任务验证，没有模型横评结论。"
     ],
     [
-      "ComfyUI / Redux 控图",
-      "把画面控制组织成工作流，保留可调步骤，适合分析类似任务的控制方式。",
-      "过往控图实践。没有将其写成当前主图平台已经集成的依赖。"
+      "人工调整场景与融合提示词",
+      "我根据候选画面调整场景提示词，处理家具、光线和构图；采用场景后，再调整融合提示词，要求保留商品颜色、材质与图案。",
+      "每轮生成后人工对照商品原图检查，结果不合适就修改提示词再生成。公开演示保留两段编辑入口，修改不会重绘预制图片。"
     ]
   ],
   "conclusion": "选型围绕明确的主图任务，参考图提供场景与风格，原图保留商品信息。已有交付与使用事实；实际费用对照需要包含全部候选和人工工作，不能把参考链接的流量当成新图效果。"
@@ -2661,7 +2661,7 @@ window.PORTFOLIO.caseDetails.carpet.productPractice = {
   "related": [
     [
       "过往制作经验",
-      "Photoshop / 3ds Max / ComfyUI / Redux",
+      "地毯渲染 / Photoshop / 3ds Max",
       "#case-carpet/production-choice"
     ],
     [
@@ -2671,7 +2671,7 @@ window.PORTFOLIO.caseDetails.carpet.productPractice = {
     ],
     [
       "当前后端",
-      "图像编辑接口 · 技术方开发",
+      "Image 2.0 · 技术方负责接口接入",
       "#case-carpet/technical"
     ]
   ],
@@ -2895,3 +2895,14 @@ window.PORTFOLIO.caseDetails.carpet.demoUpdate = {
   "scope": "场景和融合使用预制图片模拟；编辑提示词会留下记录，但不会实时重新生图。亮度调节仅作预览，下载仍为原始图片。上传参考图只保存在本浏览器。",
   "engineeringNote": "上图展示融合前的场景选择。下图展开技术方后端的单张融合任务，不是一次生成三张首图；公开演示不调用真实图像接口。"
 };
+
+// 首页封面使用各项目的实际界面，流程图保留在项目详情。
+window.PORTFOLIO.projects.find(p => p.id === 'evocontent').coverImage = 'assets/evocontent-execution-workbench.png';
+window.PORTFOLIO.projects.find(p => p.id === 'evocontent').coverNote = '内容草稿与审核工作台 · 本地界面截图';
+window.PORTFOLIO.projects.find(p => p.id === 'pmos').coverImage = 'assets/pmos-overview-cover-20261010.png';
+window.PORTFOLIO.projects.find(p => p.id === 'pmos').coverNote = '项目概览与八阶段路径 · 示例项目';
+window.PORTFOLIO.projects.find(p => p.id === 'carpet').coverImage = 'cases/assets/carpet/frontend/05-three-scenes.png';
+window.PORTFOLIO.projects.find(p => p.id === 'carpet').coverNote = '场景比较与提示词编辑 · 预制素材演示';
+window.PORTFOLIO.imageSizes['assets/evocontent-execution-workbench.png'] = [1425, 1334];
+window.PORTFOLIO.imageSizes['assets/pmos-overview-cover-20261010.png'] = [1440, 1000];
+window.PORTFOLIO.imageSizes['cases/assets/carpet/frontend/05-three-scenes.png'] = [1585, 1441];

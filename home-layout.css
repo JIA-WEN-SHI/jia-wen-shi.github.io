@@ -385,3 +385,6 @@
 .business-reference .business-version-note{font-size:12px;padding-top:15px;border-top:1px solid var(--line)}
 @media(max-width:720px){.business-reference-grid{grid-template-columns:1fr}.business-reference-grid>div{padding:19px 20px}.business-reference-grid dd{font-size:27px}}
 img[src$="cases/assets/carpet/frontend/05-three-scenes.png"]{height:auto}
+.feature-cover-link{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);border-radius:9px;background:#edf0f4}
+.feature-cover-link img{width:100%;height:100%;object-fit:contain}
+.feature-cover figcaption{font-size:11px;line-height:1.8;color:var(--muted);margin-top:14px}

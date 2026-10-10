@@ -2850,6 +2850,9 @@ window.PORTFOLIO.caseDetails.evocontent.productPractice = {
 window.PORTFOLIO.toolsUsed.find(t => t.title === "视觉与 3D 制作").link = ["传统制作与 AI 编辑的取舍", "#case-carpet/production-choice"];
 
 
+window.PORTFOLIO.projects.find(p => p.id === 'carpet').caseStudy = 'cases/carpet.html';
+window.PORTFOLIO.projects.find(p => p.id === 'legal').caseStudy = 'cases/legal.html';
+
 window.PORTFOLIO.caseDetails.carpet.demoUpdate = {
   "title": "本次更新：先定场景，再融合商品",
   "date": "2026.10.10 · 公开演示更新",

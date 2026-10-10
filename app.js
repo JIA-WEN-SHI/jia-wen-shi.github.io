@@ -140,7 +140,12 @@
   }
   function caseWorkflow(p,d) {
     if(!data.featuredIds.includes(p.id)) return `<div class="flow">${p.flow.map((f,i)=>`<div class="flow-step"><small>STEP ${String(i+1).padStart(2,'0')}</small>${e(f)}</div>`).join('')}</div>${processDiagram(d)}${mechanisms(d)}${image(p)}`;
-    return `${detailedFlowDiagram(p,data.featuredFlows[p.id])}<div class="flow-explanations"><h3>为什么这样安排流程</h3>${d.flowNotes.map(([title,reason,boundary],i)=>`<article><span>0${i+1}</span><div><h4>${e(title)}</h4><p>${e(reason)}</p><p class="flow-boundary">${e(boundary)}</p></div></article>`).join('')}</div>${d.stageContract?`<div class="stage-contract"><h3>阶段交接的数据结构</h3><p>${e(d.stageContract.lead)}</p>${evidenceTable(d.stageContract.fields,['工程字段','保存的内容'])}<p class="caption">${e(d.stageContract.note)}</p><a class="text-link" href="${e(d.stageContract.source)}" target="_blank" rel="noopener noreferrer">查看实际字段定义 ↗</a></div>`:''}${d.lifecycle?`<details class="case-expand"><summary>逐阶段查看问题、方法、产出与确认条件 · 8 阶段</summary>${lifecycle(d)}</details>`:''}${d.mechanisms?`<details class="case-expand"><summary>查看资料、版本与操作机制</summary>${mechanisms(d)}</details>`:''}${image(p)}`;
+    return `${demoUpdate(p,d)}${detailedFlowDiagram(p,data.featuredFlows[p.id])}<div class="flow-explanations"><h3>为什么这样安排流程</h3>${d.flowNotes.map(([title,reason,boundary],i)=>`<article><span>0${i+1}</span><div><h4>${e(title)}</h4><p>${e(reason)}</p><p class="flow-boundary">${e(boundary)}</p></div></article>`).join('')}</div>${d.stageContract?`<div class="stage-contract"><h3>阶段交接的数据结构</h3><p>${e(d.stageContract.lead)}</p>${evidenceTable(d.stageContract.fields,['工程字段','保存的内容'])}<p class="caption">${e(d.stageContract.note)}</p><a class="text-link" href="${e(d.stageContract.source)}" target="_blank" rel="noopener noreferrer">查看实际字段定义 ↗</a></div>`:''}${d.lifecycle?`<details class="case-expand"><summary>逐阶段查看问题、方法、产出与确认条件 · 8 阶段</summary>${lifecycle(d)}</details>`:''}${d.mechanisms?`<details class="case-expand"><summary>查看资料、版本与操作机制</summary>${mechanisms(d)}</details>`:''}${d.demoUpdate?'':image(p)}`;
+  }
+  function demoUpdate(p,d) {
+    const update=d.demoUpdate;
+    if(!update) return '';
+    return `<div class="demo-update" id="demo-update"><div class="eyebrow">${e(update.date)}</div><h3 class="case-subheading">${e(update.title)}</h3><p>${e(update.lead)}</p>${contextCards(update.steps)}${image(p)}<h3 class="case-subheading">输入变化时，哪些结果需要重新确认</h3>${evidenceTable(update.rules,['发生变化','当前处理','原因'])}<p class="caption">${e(update.scope)}</p><p class="technical-role">${e(update.engineeringNote)}</p></div>`;
   }
   function evaluationDesign(d) {
     const v=d.evaluationDesign;

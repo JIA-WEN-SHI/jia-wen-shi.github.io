@@ -2,7 +2,7 @@
 window.PORTFOLIO = {
   name: '师嘉文', city: '北京', phone: '13932349275', email: 'shijiawenniu1@gmail.com', experience: '约 4 年电商与 AIGC 相关经验',
   roles: 'AI Native 产品经理 / AIGC 产品经理',
-  introduction: '我从业务中的具体工作入手，梳理流程、确定产品范围，做方案和交互原型，再推进实现与检查。目前重点做内容运营平台和个人产品工作台；此前有电商设计、商业 AIGC 制作与交付经历。',
+  introduction: '我从工业设计与电商视觉进入商业 AIGC，承担过客户沟通、镜头制作、团队协作和成片交付。现在聚焦 AI Native / AIGC 产品，围绕真实业务拆解需求、定义流程与产品范围，并通过 PM OS、EvoContent 和电商图像平台实践 Agent、交互原型与 AI 辅助开发。',
   projects: [
     {id:'evocontent',number:'01',name:'EvoContent · 半自动内容运营平台',en:'CONTENT OPERATIONS',category:'AI Native 探索 · 内容运营',stage:"业务方案已交付 · 独立平台持续开发",role:'需求拆解、产品方案、流程与交互设计；独立实现',github:'https://github.com/JIA-WEN-SHI/evocontent-matrix',demo:'https://jia-wen-shi.github.io/demos/evocontent/',
      statement:"先按账号确定内容策略，再组织选题、草稿、审核和发布后的复盘。",image:'assets/evocontent-video-poster.png',imageNote:'本地方案演示录屏，使用示例资料与预置结果。',
@@ -732,18 +732,18 @@ window.PORTFOLIO = {
         "contribution": "参与协助制作。"
     }
 ],
-  workPractice: '在天津武清地毯电商相关工作中，制作主图、详情页及 3D 渲染图，优化渲染流程，评估图片质量与产出标准。相关渲染与图像处理方法仍被原团队使用。',
+  workPractice: '在天津地毯电商工作中，制作商品主图、详情页和 3D 场景渲染，并参与优化素材处理与质量检查方法；相关做法仍被原团队沿用。这些经验后来用于地毯 AI 主图平台的场景输入、商品一致性核对与人工筛选流程。',
   designFoundation: '工业设计实践涉及用户旅程梳理、不同方案比较、人机工程，以及实物模型制作。',
   work: [
-    {company:'中科趋势',role:'AIGC 设计师',time:'2024.03 — 至今',text:'参与并负责不同规模的商业 AIGC 项目，涵盖客户需求对接、制作推进、团队协作、版本调整与最终交付。代表作品的个人贡献在作品模块中分别说明。'},
-    {company:'科莱奥达电子商务',role:'设计',time:'2023.04 — 2023.10',text:'从事电商视觉与商品图像生产，涉及主图、详情页、渲染和图像处理，积累天津武清地毯行业的制作与工作流经验。'}
+    {company:'中科趋势',role:'AIGC 设计师',time:'2024.03 — 至今',text:'负责商业 AIGC 视频从客户沟通、镜头拆解、生成制作、反馈修改到交付的工作。独立完成中国联通 IP 贺岁视频；南方基金项目负责客户沟通到最终交付；中国日报网《数字丝路》牵头对接与制作并协调同事；央视「两弹一星·梓潼」负责约 70% 的镜头制作。结合设计经验和生成工具处理画面一致性、版本修改与团队交付。'},
+    {company:'科莱奥达电子商务',role:'设计',time:'2023.04 — 2023.10',text:'负责商品主图、详情页、Photoshop 图像处理及 3D 场景渲染，参与优化素材制作与质量检查流程。理解电商运营的选图、搭配和商品还原诉求，为后续地毯 AI 主图产品的需求拆解与交互设计提供业务基础。'}
   ],
   skills: [
-    ['需求与产品方案','需求拆解 / 业务流程 / 产品范围 / PRD'],
-    ['AI Native 工作流设计','阶段任务 / 方法论与模块沉淀 / 人工对齐 / 反馈迭代'],
-    ['原型与技术协作','Axure / XMind / 交互设计 / 前端原型 / 字段对接 / AI 辅助实现'],
-    ['视觉与工业设计基础','3D 建模与渲染 / 图像处理 / 用户旅程 / 方案比较 / 人机工程 / 实物模型制作'],
-    ['多模态与 Agent 实践','ComfyUI / Redux 控图 / 数字人口播工作流 / Agno / 阶段输入与引用校验']
+    ['需求与产品方案','从律师材料审核、门店经营和地毯电商场景梳理用户任务、业务步骤及首版范围，形成 PRD、字段要求与可操作原型。'],
+    ['AI Native 工作流设计','围绕 PM OS 设计八阶段任务、方法版本、资料引用和人工确认；在 EvoContent 规划内容审核、人工发布与 SOP 反馈，关注错误和责任边界。'],
+    ['原型与技术协作','使用 Codex、Cursor 等工具辅助实现交互原型和部分功能，完成字段对接、状态和异常流程设计；参与地毯主图平台付费交付。'],
+    ['视觉与工业设计基础','具备 Photoshop、3ds Max、商品视觉和 3D 渲染经验；把构图、材质、场景搭配与一致性判断用于 AI 图片生产和质量核对。'],
+    ['多模态与 Agent 实践','有央视、中国联通、中国日报网等商业 AIGC 镜头制作与交付经历；实践 ComfyUI、FLUX、Seedance、Agno、n8n 和 Skill/MCP。']
   ]
 };
 
@@ -2154,7 +2154,7 @@ window.PORTFOLIO.toolsUsed = [
       "Axure",
       "XMind"
     ],
-    "text": "用来梳理需求、业务流程和交互原型，再与技术方对齐字段与实现范围。",
+    "text": "在律师债权审核、门店经营、地毯电商项目中，把需求拆成使用角色、操作流程、数据字段和人工确认点，形成方案与交互原型，并与技术方对齐首版实现范围。",
     "link": [
       "流程与技术协作",
       "#case-legal/decisions"
@@ -2164,10 +2164,12 @@ window.PORTFOLIO.toolsUsed = [
     "title": "AI 辅助实现与 Agent",
     "names": [
       "Codex",
+      "Cursor",
       "Hermes",
+      "OpenClaw",
       "Agno"
     ],
-    "text": "AI 辅助实现与 Agent 使用经历；PM OS 工程使用 Agno 执行阶段任务。",
+    "text": "借助 Codex、Cursor 将产品方案转为可操作原型；PM OS 使用 Agno 执行阶段任务，并设计输入快照、引用复核和人工确认。Hermes、OpenClaw 属于个人 Agent 工具实践，并非已集成的商业系统。",
     "link": [
       "阶段执行与工程结构",
       "#case-pmos/technical"
@@ -2176,12 +2178,14 @@ window.PORTFOLIO.toolsUsed = [
   {
     "title": "图像、视频与控图",
     "names": [
-      "Midjourney",
-      "Seedance",
       "ComfyUI",
+      "FLUX",
+      "ControlNet",
+      "Seedance",
+      "可灵",
       "Redux"
     ],
-    "text": "图像与视频生成、工作流搭建和画面控制；已有数字人口播与电商控图实践。",
+    "text": "在商业 AIGC 视频中按镜头需求组合图像生成、参考图控制和视频模型，处理人物一致性、构图、动作与局部修改。实际参与央视、中国联通、中国日报网等项目，既关注成片效果，也关注返工和可控性。",
     "link": [
       "多模态制作实践",
       "#workflow"
@@ -2194,7 +2198,7 @@ window.PORTFOLIO.toolsUsed = [
       "Remotion",
       "FFmpeg"
     ],
-    "text": "音频及视频工具使用经历；过往口播工作流包含对口型、分镜与剪辑。",
+    "text": "围绕数字人口播与商业视频，实践从文案、TTS、图像、对口型到剪辑的制作链路，并探索用脚本处理素材与视频输出；关注音画协调、镜头连贯和修改成本。",
     "link": [
       "商业成片与个人贡献",
       "#practice"
@@ -2204,9 +2208,10 @@ window.PORTFOLIO.toolsUsed = [
     "title": "视觉与 3D 制作",
     "names": [
       "Photoshop",
-      "3ds Max"
+      "3ds Max",
+      "Tripo"
     ],
-    "text": "电商主图、详情页与 3D 渲染实践；部分渲染与图像处理方法仍被原团队沿用。",
+    "text": "电商工作中制作商品主图、详情页与室内场景渲染，理解材质、灯光、构图与产品还原。相关经验转化为地毯 AI 主图平台的商品约束、候选筛选和人工验收；Tripo 用于 AI 三维工具探索。",
     "link": [
       "电商视觉工作经历",
       "#about"
@@ -2218,7 +2223,7 @@ window.PORTFOLIO.toolsUsed = [
       "Playwright",
       "Computer Use"
     ],
-    "text": "浏览器操作实践。内容平台的发布保留人工操作，避免把平台风控带进自动执行。",
+    "text": "尝试浏览器自动化进行采集和网页操作，关注执行权限、失败反馈与可恢复性。EvoContent 的自动发布受到平台风控影响，因此将内容审核和实际发布留给人工。",
     "link": [
       "发布方式的产品取舍",
       "#case-evocontent/decisions"
@@ -2228,9 +2233,11 @@ window.PORTFOLIO.toolsUsed = [
     "title": "知识与资料处理",
     "names": [
       "Obsidian",
-      "OCR 相关模型探索"
+      "Ollama",
+      "Supabase",
+      "OCR / RAG"
     ],
-    "text": "私有知识库整理与 OCR 模型使用经历；知识库接入仍在规划，原流水项目未完成后端联调。",
+    "text": "实践过 Ollama 与 Supabase 结合的企业知识库；在律师流水审核场景测试 PDF/OCR 识别，设计原文对照、字段提示与人工复核。原项目的字段映射和后端联调未完成，不将原型视为上线成果。",
     "link": [
       "原型与验证范围",
       "#case-legal/result"
@@ -2503,7 +2510,7 @@ window.PORTFOLIO.toolsUsed.splice(2, 0, {
     "GrillMe",
     "pm-skill"
   ],
-  "text": "编写内容 Skill 沉淀方法；用 Superpowers、GrillMe 做开发需求挖掘，用 pm-skill 辅助产品梳理。",
+  "text": "把内容生产经验整理成可复用 Skill，并使用 Superpowers、GrillMe、pm-skills 辅助追问需求与拆解方案。PM OS 将方法说明、版本和任务输入关联；方法复用收益仍待真实项目验证。",
   "link": [
     "查看 Skill 的具体用法",
     "#tools-integration"
@@ -2513,10 +2520,11 @@ window.PORTFOLIO.toolsUsed.splice(2, 0, {
   "title": "信息采集与工具连接",
   "names": [
     "n8n",
+    "Coze",
     "MCP",
     "Supabase"
   ],
-  "text": "用 n8n 采集信息；通过 MCP 连接过微信发布工具与 Supabase，辅助开发。",
+  "text": "用 n8n 组织资讯采集、内容整理与草稿生成，尝试连接微信草稿接口；通过 MCP 接触外部工具与 Supabase。EvoContent 对外部采集保留只读、来源核对和人工审核边界。",
   "link": [
     "查看 MCP 与自动化实践",
     "#tools-integration"
@@ -2568,17 +2576,17 @@ window.PORTFOLIO.agentToolPractice = {
     {
       "title": "内容方法沉淀",
       "label": "自己编写的内容 Skill",
-      "text": "在自己的内容项目中编写过 Skill，将内容工作的经验整理成可以继续使用的方法。"
+      "text": "在个人内容项目中，把素材整理、内容生成和审核的常用步骤写成 Skill，约定输入、输出和人工检查位置；尚未量化复用效率。"
     },
     {
       "title": "开发与产品需求梳理",
       "label": "Superpowers · GrillMe · pm-skill",
-      "text": "开发前用 Superpowers、GrillMe 做需求挖掘；用 pm-skill 辅助按产品方法梳理问题和方案。"
+      "text": "用 Superpowers、GrillMe 追问用户任务、边界条件与失败处理，用 pm-skills 辅助需求定义、方案比较和验证步骤，再将确认的方法纳入工作台。"
     },
     {
       "title": "信息采集与工具连接",
       "label": "n8n · MCP · Supabase",
-      "text": "用 n8n 做信息采集；通过 MCP 连接过微信发布相关工具和 Supabase，辅助开发。"
+      "text": "用 n8n 组织新闻与内容采集、清洗及草稿处理，通过 MCP 连接过微信相关工具和 Supabase，关注字段、异常、权限及人工确认。"
     }
   ]
 };

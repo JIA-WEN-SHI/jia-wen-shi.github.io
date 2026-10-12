@@ -3051,7 +3051,7 @@ window.PORTFOLIO.resume = {
   ],
   "pageCount": 1,
   "files": {
-    "pdf": "assets/resume/shi-jiawen-ai-product-resume-one-page-20261012.pdf?v=20261012-one-page-07",
-    "docx": "assets/resume/shi-jiawen-ai-product-resume-one-page-20261012.docx?v=20261012-one-page-07"
+    "pdf": "assets/resume/shi-jiawen-ai-product-resume-one-page-expanded-20261012.pdf?v=20261012-expanded-08",
+    "docx": "assets/resume/shi-jiawen-ai-product-resume-one-page-expanded-20261012.docx?v=20261012-expanded-08"
   }
 };

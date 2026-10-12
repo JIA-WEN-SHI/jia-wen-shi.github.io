@@ -1,8 +1,8 @@
 // 后续优先修改此文件里的文字、图片和案例依据。案例文案与公开演示入口集中在此。
 window.PORTFOLIO = {
-  name: '师嘉文', city: '北京', phone: '13932349275', email: 'shijiawenniu1@gmail.com', experience: '约 4 年电商与 AIGC 相关经验',
+  name: '师嘉文', city: '北京', phone: '13932349275', email: 'shijiawenniu1@gmail.com',
   roles: 'AI Native 产品经理 / AIGC 产品经理',
-  introduction: '我从业务中的具体工作入手，梳理流程、确定产品范围，做方案和交互原型，再推进实现与检查。目前重点做内容运营平台和个人产品工作台；此前有电商设计、商业 AIGC 制作与交付经历。',
+  introduction: '我从业务中的具体问题出发，梳理流程、确定产品范围，再通过原型和 AI 辅助开发验证方案。实践覆盖电商主图、内容运营和产品工作台；关注技术能力边界，也关注生成结果的质量、成本和人工确认。',
   projects: [
     {id:'evocontent',number:'01',name:'EvoContent · 半自动内容运营平台',en:'CONTENT OPERATIONS',category:'AI Native 探索 · 内容运营',stage:"业务方案已交付 · 独立平台持续开发",role:'需求拆解、产品方案、流程与交互设计；独立实现',github:'https://github.com/JIA-WEN-SHI/evocontent-matrix',demo:'https://jia-wen-shi.github.io/demos/evocontent/',
      statement:"先按账号确定内容策略，再组织选题、草稿、审核和发布后的复盘。",image:'assets/evocontent-video-poster.png',imageNote:'本地方案演示录屏，使用示例资料与预置结果。',
@@ -2917,7 +2917,7 @@ window.PORTFOLIO.resume = {
   "portfolio": "https://jia-wen-shi.github.io/",
   "github": "https://github.com/JIA-WEN-SHI",
   "updated": "2026.10.12",
-  "profile": "具备电商视觉制作与商业 AIGC 交付背景，有业务需求梳理、产品方案、交互设计及前后端 AI 辅助开发实践。能够根据业务场景判断生成技术的适用范围，通过原型和实际任务验证方案，利用人工审核、引用校验、版本确认与错误处理控制质量和风险。",
+  "profile": "从业务流程出发梳理需求、定义产品范围，负责方案、交互设计与 AI 辅助开发。实践覆盖电商主图、内容运营与个人产品工作台，能够结合技术能力边界选择实现方式，通过原型和实际任务验证方案，并用质量检查、人工确认和版本记录控制风险。",
   "work": [
     {
       "company": "中科趋势",
@@ -3032,7 +3032,7 @@ window.PORTFOLIO.resume = {
   },
   "pageCount": 2,
   "files": {
-    "pdf": "assets/resume/shi-jiawen-ai-product-resume-20261012.pdf",
-    "docx": "assets/resume/shi-jiawen-ai-product-resume-20261012.docx"
+    "pdf": "assets/resume/shi-jiawen-ai-product-resume-20261012.pdf?v=20261012-profile-02",
+    "docx": "assets/resume/shi-jiawen-ai-product-resume-20261012.docx?v=20261012-profile-02"
   }
 };

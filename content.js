@@ -3049,9 +3049,9 @@ window.PORTFOLIO.resume = {
     "羽毛球",
     "徒步"
   ],
-  "pageCount": 2,
+  "pageCount": 1,
   "files": {
-    "pdf": "assets/resume/shi-jiawen-ai-product-resume-two-column-20261012.pdf?v=20261012-portrait-06",
-    "docx": "assets/resume/shi-jiawen-ai-product-resume-two-column-20261012.docx?v=20261012-portrait-06"
+    "pdf": "assets/resume/shi-jiawen-ai-product-resume-one-page-20261012.pdf?v=20261012-one-page-07",
+    "docx": "assets/resume/shi-jiawen-ai-product-resume-one-page-20261012.docx?v=20261012-one-page-07"
   }
 };

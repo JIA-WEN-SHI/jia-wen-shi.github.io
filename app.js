@@ -2,6 +2,8 @@
   'use strict';
   const data = window.PORTFOLIO;
   const main = document.getElementById('main');
+  const resumeLink = document.querySelector('.nav-resume');
+  if (resumeLink && data.resume?.files?.pdf) resumeLink.href = data.resume.files.pdf;
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const e = escape;
   const link = p => `#case-${p.id}`;

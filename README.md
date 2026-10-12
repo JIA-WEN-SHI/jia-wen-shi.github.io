@@ -4,6 +4,8 @@
 
 [新版简历](https://jia-wen-shi.github.io/#resume) · [PDF 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.pdf?v=20261012-clean-10) · [Word 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.docx?v=20261012-clean-10)
 
+网站顶部“查看简历”在新标签页直接打开已确认的 PDF 简历，链接随简历文件配置更新。
+
 五个项目的案例、公开源码和五项可直接操作的前端演示。内容仍在逐步完善，不把模拟数据或未验收的能力写成真实业务成果。
 
 [内容平台方案演示视频（76 秒）](https://jia-wen-shi.github.io/#case-evocontent/video)

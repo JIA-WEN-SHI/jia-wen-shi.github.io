@@ -2999,20 +2999,24 @@ window.PORTFOLIO.resume = {
       "业务流程梳理、需求拆解、范围定义、PRD、交互原型与验收条件设计；使用 Axure、XMind。"
     ],
     [
-      "AI 辅助研发",
-      "使用 Codex、Hermes、Superpowers 推进开发；具备前后端 AI 辅助实现、图像接口适配及 Supabase 使用实践。"
+      "AI 辅助开发",
+      "使用 Codex、Hermes、Cursor、Superpowers 辅助方案验证与前后端开发；有 API 接口对接、图像模型接入及 Supabase 使用实践。"
     ],
     [
-      "Agent 与工具连接",
-      "Agno、Agent Skills、MCP、n8n；编写过内容 Skill，通过 MCP 连接过微信发布相关工具及 Supabase，使用 n8n 采集信息。"
+      "Agent 与自动化",
+      "使用 Agno、n8n、MCP、Agent Skills 与工具调用（Tool Calling）；编写内容 Skill，连接微信发布相关工具与 Supabase，使用 n8n 采集信息。"
     ],
     [
-      "多模态制作",
-      "Image 2.0、Midjourney、Seedance、ComfyUI / Redux；具备数字人口播、图像编辑及控图实践，使用 FFmpeg、Remotion、ElevenLabs。"
+      "生成模型与应用",
+      "围绕图像编辑、商品控图、数字人口播与视频制作选择工具；使用过 Image 2.0 / GPT Image、Midjourney、即梦、Seedance 2.0、海螺、Runway 等。"
     ],
     [
-      "视觉与设计基础",
-      "Photoshop、3ds Max，电商主图、详情页及 3D 渲染；具备用户旅程、方案比较和人机工程基础。"
+      "开源工作流与训练实践",
+      "搭建过 ComfyUI / Redux 工作流，使用过 Stable Diffusion 等开源图像工具；基础了解人脸 LoRA 训练，实践过素材整理、打标与基础训练流程。"
+    ],
+    [
+      "视觉与视频制作",
+      "使用 Photoshop、3ds Max 制作电商图片与渲染素材；具备 Maya、Premiere Pro、After Effects 基础使用经验。使用 FFmpeg、Remotion、ElevenLabs 制作和处理视频、语音。"
     ]
   ],
   "community": {
@@ -3028,11 +3032,26 @@ window.PORTFOLIO.resume = {
     "school": "华北理工大学轻工学院",
     "degree": "本科",
     "major": "工业设计",
-    "time": "2017 - 2021"
+    "time": "2017 - 2021",
+    "campus": "院学生会副主席；RT 舞社 Breaking 社长。参与组织校园活动与社团训练、演出。"
   },
+  "locationLabel": "所在地",
+  "honors": [
+    "2025 年 24 小时超创赛｜心宙共鸣奖",
+    "2026 年 ACX 超创赛｜AI 先锋奖",
+    "人工智能与机器人创新大赛（河北赛区）｜一等奖",
+    "河北省第十届大学生工业设计创新大赛｜优秀奖",
+    "2019–2020 学年｜一等奖学金",
+    "2018–2019 学年｜优秀共青团员"
+  ],
+  "interests": [
+    "唱歌",
+    "羽毛球",
+    "徒步"
+  ],
   "pageCount": 2,
   "files": {
-    "pdf": "assets/resume/shi-jiawen-ai-product-resume-20261012.pdf?v=20261012-profile-02",
-    "docx": "assets/resume/shi-jiawen-ai-product-resume-20261012.docx?v=20261012-profile-02"
+    "pdf": "assets/resume/shi-jiawen-ai-product-resume-20261012.pdf?v=20261012-details-03",
+    "docx": "assets/resume/shi-jiawen-ai-product-resume-20261012.docx?v=20261012-details-03"
   }
 };

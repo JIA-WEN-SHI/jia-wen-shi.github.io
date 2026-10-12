@@ -3051,7 +3051,7 @@ window.PORTFOLIO.resume = {
   ],
   "pageCount": 2,
   "files": {
-    "pdf": "assets/resume/shi-jiawen-ai-product-resume-two-column-20261012.pdf?v=20261012-layout-05",
-    "docx": "assets/resume/shi-jiawen-ai-product-resume-two-column-20261012.docx?v=20261012-layout-05"
+    "pdf": "assets/resume/shi-jiawen-ai-product-resume-two-column-20261012.pdf?v=20261012-portrait-06",
+    "docx": "assets/resume/shi-jiawen-ai-product-resume-two-column-20261012.docx?v=20261012-portrait-06"
   }
 };

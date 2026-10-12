@@ -388,3 +388,5 @@ img[src$="cases/assets/carpet/frontend/05-three-scenes.png"]{height:auto}
 .feature-cover-link{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);border-radius:9px;background:#edf0f4}
 .feature-cover-link img{width:100%;height:100%;object-fit:contain}
 .feature-cover figcaption{font-size:11px;line-height:1.8;color:var(--muted);margin-top:14px}
+
+.resume-entry{margin-bottom:26px}.resume-bullets{padding-left:21px;margin:10px 0}.resume-bullets li{margin:9px 0}.resume-meta{font-size:13px;color:var(--muted)}.resume-source-links{display:flex;flex-wrap:wrap;gap:14px 25px;margin-top:16px}

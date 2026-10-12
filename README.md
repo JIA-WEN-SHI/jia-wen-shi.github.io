@@ -2,6 +2,8 @@
 
 [公开作品集](https://jia-wen-shi.github.io/)
 
+[新版简历](https://jia-wen-shi.github.io/#resume) · [PDF 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-20261012.pdf) · [Word 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-20261012.docx)
+
 五个项目的案例、公开源码和五项可直接操作的前端演示。内容仍在逐步完善，不把模拟数据或未验收的能力写成真实业务成果。
 
 [内容平台方案演示视频（76 秒）](https://jia-wen-shi.github.io/#case-evocontent/video)

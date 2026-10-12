@@ -2906,3 +2906,133 @@ window.PORTFOLIO.projects.find(p => p.id === 'carpet').coverNote = '场景比较
 window.PORTFOLIO.imageSizes['assets/evocontent-execution-workbench.png'] = [1425, 1334];
 window.PORTFOLIO.imageSizes['assets/pmos-overview-cover-20261010.png'] = [1440, 1000];
 window.PORTFOLIO.imageSizes['cases/assets/carpet/frontend/05-three-scenes.png'] = [1585, 1441];
+
+// 投递简历与下载文件使用同一份经过核对的内容。
+window.PORTFOLIO.resume = {
+  "name": "师嘉文",
+  "roles": "AI Native 产品经理 / AIGC 产品经理",
+  "city": "北京",
+  "phone": "13932349275",
+  "email": "shijiawenniu1@gmail.com",
+  "portfolio": "https://jia-wen-shi.github.io/",
+  "github": "https://github.com/JIA-WEN-SHI",
+  "updated": "2026.10.12",
+  "profile": "具备电商视觉制作与商业 AIGC 交付背景，有业务需求梳理、产品方案、交互设计及前后端 AI 辅助开发实践。能够根据业务场景判断生成技术的适用范围，通过原型和实际任务验证方案，利用人工审核、引用校验、版本确认与错误处理控制质量和风险。",
+  "work": [
+    {
+      "company": "中科趋势",
+      "role": "AIGC 设计师",
+      "time": "2024.03 - 至今",
+      "bullets": [
+        "负责商业 AIGC 项目的需求沟通、制作推进、版本修改与交付；独立完成中国联通 IP 贺岁视频，负责南方基金项目从客户沟通到成片交付的全过程。",
+        "牵头中国日报网《数字丝路》的需求对接与制作，协调一位同事完成部分镜头；负责央视 AI「两弹一星」相关视频约 70% 的镜头制作。",
+        "使用自建自动化脚本完成华泰证券 IP 内容制作，积累生成工具、制作流程与人工质量检查相结合的交付经验。"
+      ]
+    },
+    {
+      "company": "科莱奥达电子商务",
+      "role": "设计",
+      "time": "2023.04 - 2023.10",
+      "bullets": [
+        "从事地毯电商主图、详情页、3D 渲染及图像处理，围绕商品特征、应用场景和家居搭配制作展示素材。",
+        "梳理渲染制作流程与图片质量标准，积累天津武清地毯行业的图像生产经验；相关制作方法仍被原团队沿用。"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "carpet",
+      "name": "地毯首图生产平台",
+      "role": "产品方案及前后端 AI 辅助开发",
+      "status": "2026.05 启动，开发约一个月；主图功能已付费买断交付并使用",
+      "url": "https://jia-wen-shi.github.io/#case-carpet",
+      "bullets": [
+        "梳理运营选参考、分析链接与设计师制作的原有分工，将首版范围限定为已有商品与已选参考的场景主图，让运营能够直接操作；纯原创设计继续由设计师完成。",
+        "设计参考主图、自有 SKU、三角度场景比较、人工采用、商品融合和核对保存流程。使用 Image 2.0，按生成结果手动调整场景与融合提示词，分别检查构图、搭配及商品颜色、材质和图案。",
+        "负责产品方案、交互设计及前后端 AI 辅助开发。工程使用 React / TypeScript、Node.js / Fastify 与 Supabase，组织素材输入、任务状态、接口适配与结果保存。",
+        "主图功能向天津前老板一次性买断交付，已收款、对方已使用。本人提供的制作口径为生成与筛选约 5-8 分钟一套，不含运营提前准备商品及竞品参考的时间。"
+      ]
+    },
+    {
+      "id": "evocontent",
+      "name": "EvoContent 半自动内容运营平台",
+      "role": "需求分析、产品设计与独立实现",
+      "status": "业务方案已交付；独立平台持续开发",
+      "url": "https://jia-wen-shi.github.io/#case-evocontent",
+      "bullets": [
+        "从留学与移民业务团队的内容效率问题出发，梳理账号分层、人设、选题、草稿审核与反馈流程，交付业务方案，由业务方自行开发。围绕同类需求独立构建内容工作台，并沉淀内容 Skill。",
+        "针对自动发布容易触发平台风控的问题，取消自动发布，保留人工发布与登记；策略调整先形成建议，经人工确认后更新 SOP。",
+        "本地运行已覆盖参考采集到待审核草稿，保留来源引用和任务状态；通过重复任务复用、已有素材保留及局部重试，处理重复操作和采集失败。真实发布到反馈的完整链路仍在验证。"
+      ]
+    },
+    {
+      "id": "pmos",
+      "name": "PM OS AI 产品工作台",
+      "role": "产品方法、工作流设计与独立实现",
+      "status": "个人工作台；持续开发",
+      "url": "https://jia-wen-shi.github.io/#case-pmos",
+      "bullets": [
+        "为解决项目资料、分析与方法难以复用的问题，设计发现、定义、可行性、方案、实验、评估、交付和复盘八阶段工作台，明确各阶段的输入、产出与人工确认条件。",
+        "通过 AI 辅助实现资料版本、原文引用、报告确认、运行输入快照及相邻阶段交接；使用 Agno 组织阶段 Agent 执行，保存项目资料、运行记录与方法版本。",
+        "在使用模拟业务材料的真实模型测试中，利用引用类型校验拦截错误结果，通过追问修正后采用并保存；将模型已生成、人工已采用和阶段已验收设为不同状态。",
+        "设计上游变更后的下游复核规则，区分草稿与确认版，保留历史运行对应的输入版本。目前已验证部分执行和交接机制，完整八阶段业务项目验收仍在推进。"
+      ]
+    }
+  ],
+  "additionalProjects": [
+    {
+      "id": "legal",
+      "name": "债权申报审查工作台",
+      "url": "https://jia-wen-shi.github.io/#case-legal",
+      "text": "承接律师使用 Excel 加人工审核流水的真实需求，负责业务流程、整体方案及前端原型，参与识别字段与审核逻辑的研发对接。原型交给合作朋友展示，后续客户取消需求，项目未落地。"
+    },
+    {
+      "id": "store",
+      "name": "实体门店 AI 经营助手",
+      "url": "https://jia-wen-shi.github.io/#case-store",
+      "text": "通过私董会负责人对接两家北京商家，进行线下需求接触，整理经营看板、营销准备和客户回访流程，完成方案与交互原型阶段的交付。"
+    }
+  ],
+  "skills": [
+    [
+      "产品分析与设计",
+      "业务流程梳理、需求拆解、范围定义、PRD、交互原型与验收条件设计；使用 Axure、XMind。"
+    ],
+    [
+      "AI 辅助研发",
+      "使用 Codex、Hermes、Superpowers 推进开发；具备前后端 AI 辅助实现、图像接口适配及 Supabase 使用实践。"
+    ],
+    [
+      "Agent 与工具连接",
+      "Agno、Agent Skills、MCP、n8n；编写过内容 Skill，通过 MCP 连接过微信发布相关工具及 Supabase，使用 n8n 采集信息。"
+    ],
+    [
+      "多模态制作",
+      "Image 2.0、Midjourney、Seedance、ComfyUI / Redux；具备数字人口播、图像编辑及控图实践，使用 FFmpeg、Remotion、ElevenLabs。"
+    ],
+    [
+      "视觉与设计基础",
+      "Photoshop、3ds Max，电商主图、详情页及 3D 渲染；具备用户旅程、方案比较和人机工程基础。"
+    ]
+  ],
+  "community": {
+    "name": "NeuroLab 纽罗实验室 北京 AI 社群",
+    "role": "发起与运营",
+    "time": "2025.10 - 至今",
+    "bullets": [
+      "组织约 200 人的线下交流社群，已开展近 20 场主题活动，围绕 AI Native、Agent、知识库与业务场景交流。",
+      "组织成员参与 AI 黑客松，通过线下交流接触不同领域的从业者，积累业务需求线索与合作机会。"
+    ]
+  },
+  "education": {
+    "school": "华北理工大学轻工学院",
+    "degree": "本科",
+    "major": "工业设计",
+    "time": "2017 - 2021"
+  },
+  "pageCount": 2,
+  "files": {
+    "pdf": "assets/resume/shi-jiawen-ai-product-resume-20261012.pdf",
+    "docx": "assets/resume/shi-jiawen-ai-product-resume-20261012.docx"
+  }
+};

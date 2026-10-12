@@ -168,13 +168,17 @@
     </div></div>`;
   }
   function resume() {
-    return `<section class="page-heading"><div class="eyebrow">RESUME / AI PRODUCT</div><h1>师嘉文</h1><p>${e(data.roles)}<br>北京 · ${e(data.experience)} · 本科 / 工业设计 · ${e(data.phone)}<br><a href="mailto:${e(data.email)}">${e(data.email)}</a></p><div class="actions no-print"><button class="button primary" id="print-resume" type="button">打印 / 保存 PDF</button><a class="button" href="#home">返回作品集</a></div></section><div class="resume-layout"><div>
-    <section class="resume-section"><h2>个人简介</h2><p>${e(data.introduction)}</p><p>自主组织 200+ 人北京 AI 线下交流社群，通过行业交流接触业务诉求，推进方案沟通与项目合作。持续实践多模态生成、Agent 与工作流工具。</p></section>
-    <section class="resume-section"><h2>工作经历</h2>${timeline()}<p>${e(data.workPractice)}</p></section><section class="resume-section"><h2>AIGC 代表作品与个人贡献</h2>${data.aigc.map(a => `<article style="margin-bottom:20px"><h3>${e(a.name)}</h3><p>${e(a.contribution)}</p>${a.source ? `<a class="text-link no-print" href="${e(a.source)}" target="_blank" rel="noopener noreferrer">查看原视频</a>` : ''}</article>`).join('')}</section>
-    <section class="resume-section"><h2>产品项目</h2>${data.projects.map(p => `<article style="margin-bottom:25px"><h3><a href="${link(p)}">${e(p.name)}</a></h3><p class="caption">${e(p.role)} · ${e(p.stage)}</p><p>${e(p.summary)}</p></article>`).join('')}</section>
-    <section class="resume-section"><h2>社群与行业实践</h2><h3>${e(data.community.name)} · 组织者</h3><p>${e(data.community.started)}。${e(data.community.summary)}${e(data.community.practice)}</p><a class="text-link" href="${e(data.community.url)}" target="_blank" rel="noopener noreferrer">社群公开活动记录</a></section>
-    <section class="resume-section"><h2>教育与荣誉</h2><h3>华北理工大学轻工学院</h3><p>本科 · 工业设计 · 2017–2021</p><p>${e(data.designFoundation)}</p><h3>全国三维数字化创新大赛（龙鼎奖）</h3><p>2018–2019 年河北赛区一等奖</p></section>
-    </div><aside class="resume-aside"><div class="eyebrow">PRODUCT CAPABILITIES & PRACTICE</div>${data.skills.map(s => `<div class="skill-group"><strong>${e(s[0])}</strong><p>${e(s[1])}</p></div>`).join('')}<p class="caption">项目当前阶段与个人职责，详见对应案例。</p></aside></div>`;
+    const r=data.resume;
+    const bullets=items => '<ul class="resume-bullets">'+items.map(text=>'<li>'+e(text)+'</li>').join('')+'</ul>';
+    const project=p => '<article class="resume-entry"><h3><a href="'+e(p.url)+'">'+e(p.name)+'</a></h3><p class="resume-meta">'+e(p.role)+' · '+e(p.status)+'</p>'+bullets(p.bullets)+'</article>';
+    return '<section class="page-heading"><div class="eyebrow">RESUME / AI PRODUCT</div><h1>'+e(r.name)+'</h1><p>'+e(r.roles)+'<br>'+e(r.city)+' · 本科 / 工业设计 · '+e(r.phone)+'<br><a href="mailto:'+e(r.email)+'">'+e(r.email)+'</a></p><p class="caption">更新于 '+e(r.updated)+' · '+e(r.pageCount)+' 页投递简历</p><div class="actions no-print"><a class="button primary" href="'+e(r.files.pdf)+'" download="师嘉文_AI产品经理_简历.pdf">下载 PDF 简历</a><a class="button" href="'+e(r.files.docx)+'" download="师嘉文_AI产品经理_简历.docx">下载 Word 简历</a><a class="button" href="#home">返回作品集</a></div></section><div class="resume-layout"><div>'
+      +'<section class="resume-section"><h2>个人简介</h2><p>'+e(r.profile)+'</p><div class="resume-source-links no-print"><a class="text-link" href="'+e(r.portfolio)+'">作品集与项目演示 ↗</a><a class="text-link" href="'+e(r.github)+'" target="_blank" rel="noopener noreferrer">GitHub 项目源码 ↗</a></div></section>'
+      +'<section class="resume-section"><h2>工作经历</h2>'+r.work.map(w=>'<article class="resume-entry"><h3>'+e(w.company)+' · '+e(w.role)+'</h3><p class="resume-meta">'+e(w.time)+'</p>'+bullets(w.bullets)+'</article>').join('')+'</section>'
+      +'<section class="resume-section"><h2>核心项目经历</h2>'+r.projects.map(project).join('')+'</section>'
+      +'<section class="resume-section"><h2>补充产品实践</h2>'+r.additionalProjects.map(p=>'<article class="resume-entry"><h3><a href="'+e(p.url)+'">'+e(p.name)+'</a></h3><p>'+e(p.text)+'</p></article>').join('')+'</section>'
+      +'<section class="resume-section"><h2>社群与行业实践</h2><h3>'+e(r.community.name)+' · '+e(r.community.role)+'</h3><p class="resume-meta">'+e(r.community.time)+'</p>'+bullets(r.community.bullets)+'</section>'
+      +'<section class="resume-section"><h2>教育经历</h2><h3>'+e(r.education.school)+'</h3><p>'+e(r.education.degree)+' · '+e(r.education.major)+' · '+e(r.education.time)+'</p></section>'
+      +'</div><aside class="resume-aside"><div class="eyebrow">PRODUCT CAPABILITIES & PRACTICE</div>'+r.skills.map(([title,text])=>'<div class="skill-group"><strong>'+e(title)+'</strong><p>'+e(text)+'</p></div>').join('')+'</aside></div>';
   }
   let currentView = '';
   function route() {

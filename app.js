@@ -2,8 +2,6 @@
   'use strict';
   const data = window.PORTFOLIO;
   const main = document.getElementById('main');
-  const resumeLink = document.querySelector('.nav-resume');
-  if (resumeLink && data.resume?.files?.pdf) resumeLink.href = data.resume.files.pdf;
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const e = escape;
   const link = p => `#case-${p.id}`;
@@ -173,7 +171,8 @@
     const r=data.resume;
     const bullets=items => '<ul class="resume-bullets">'+items.map(text=>'<li>'+e(text)+'</li>').join('')+'</ul>';
     const project=p => '<article class="resume-entry"><h3><a href="'+e(p.url)+'">'+e(p.name)+'</a></h3><p class="resume-meta">'+e(p.role)+' · '+e(p.status)+'</p>'+bullets(p.bullets)+'</article>';
-    return '<section class="page-heading"><div class="eyebrow">RESUME / AI PRODUCT</div><h1>'+e(r.name)+'</h1><p>'+e(r.roles)+'<br>'+e(r.locationLabel||'所在地')+'：'+e(r.city)+' · 本科 / 工业设计 · '+e(r.phone)+'<br><a href="mailto:'+e(r.email)+'">'+e(r.email)+'</a></p><p class="caption">更新于 '+e(r.updated)+' · '+e(r.pageCount)+' 页投递简历</p><div class="actions no-print"><a class="button primary" href="'+e(r.files.pdf)+'" download="师嘉文_AI产品经理_简历.pdf">下载 PDF 简历</a><a class="button" href="'+e(r.files.docx)+'" download="师嘉文_AI产品经理_简历.docx">下载 Word 简历</a><a class="button" href="#home">返回作品集</a></div></section><div class="resume-layout"><div>'
+    const preview=(r.previewPages||[]).map((page,i)=>'<figure class="resume-sheet"><button class="resume-preview-page" type="button" data-resume-preview data-image="'+e(page.src)+'" data-caption="'+e(r.roles)+'" aria-label="放大查看简历第 '+(i+1)+' 页"><img src="'+e(page.src)+'" width="'+e(page.width)+'" height="'+e(page.height)+'" alt="'+e(r.name)+'的简历第 '+(i+1)+' 页" loading="'+(i?'lazy':'eager')+'"></button></figure>').join('');
+    return '<section class="page-heading resume-view-heading"><div><div class="eyebrow">RESUME / AI PRODUCT</div><h1>个人简历</h1></div><div class="actions no-print"><a class="button primary" href="'+e(r.files.pdf)+'" download="师嘉文_AI产品经理_简历.pdf">下载 PDF 简历</a><a class="button" href="'+e(r.files.docx)+'" download="师嘉文_AI产品经理_简历.docx">下载 Word 简历</a><a class="button" href="#home">返回作品集</a></div></section><p class="resume-preview-hint">点按简历可放大查看</p><section class="resume-document" aria-label="简历在线预览">'+preview+'</section><details class="resume-readable"><summary>查看文字版与项目链接</summary><div class="resume-layout"><div>'
       +'<section class="resume-section"><h2>个人简介</h2><p>'+e(r.profile)+'</p><div class="resume-source-links no-print"><a class="text-link" href="'+e(r.portfolio)+'">作品集与项目演示 ↗</a><a class="text-link" href="'+e(r.github)+'" target="_blank" rel="noopener noreferrer">GitHub 项目源码 ↗</a></div></section>'
       +'<section class="resume-section"><h2>工作经历</h2>'+r.work.map(w=>'<article class="resume-entry"><h3>'+e(w.company)+' · '+e(w.role)+'</h3><p class="resume-meta">'+e(w.time)+'</p>'+bullets(w.bullets)+'</article>').join('')+'</section>'
       +'<section class="resume-section"><h2>核心项目经历</h2>'+r.projects.map(project).join('')+'</section>'
@@ -182,7 +181,7 @@
       +'<section class="resume-section"><h2>教育经历</h2><h3>'+e(r.education.school)+'</h3><p>'+e(r.education.degree)+' · '+e(r.education.major)+' · '+e(r.education.time)+'</p>'+(r.education.campus?'<p>'+e(r.education.campus)+'</p>':'')+'</section>'
       +(r.honors&&r.honors.length?'<section class="resume-section"><h2>荣誉奖项</h2>'+bullets(r.honors)+'</section>':'')
       +(r.interests&&r.interests.length?'<section class="resume-section"><h2>兴趣爱好</h2><p>'+e(r.interests.join('、'))+'</p></section>':'')
-      +'</div><aside class="resume-aside"><div class="eyebrow">PRODUCT CAPABILITIES & PRACTICE</div>'+r.skills.map(([title,text])=>'<div class="skill-group"><strong>'+e(title)+'</strong><p>'+e(text)+'</p></div>').join('')+'</aside></div>';
+      +'</div><aside class="resume-aside"><div class="eyebrow">PRODUCT CAPABILITIES & PRACTICE</div>'+r.skills.map(([title,text])=>'<div class="skill-group"><strong>'+e(title)+'</strong><p>'+e(text)+'</p></div>').join('')+'</aside></div></details>';
   }
   let currentView = '';
   function route() {
@@ -217,10 +216,12 @@
     const button=event.target.closest('[data-image]');
     if(button) {
       dialog.classList.toggle('aigc-dialog',button.classList.contains('aigc-image'));
+      dialog.classList.toggle('resume-dialog',button.hasAttribute('data-resume-preview'));
       dialog.querySelector('img').src=button.dataset.image;
       dialog.querySelector('img').alt=button.getAttribute('aria-label');
       dialog.querySelector('p').textContent=button.dataset.caption;
       dialog.showModal();
+      if(button.hasAttribute('data-resume-preview')) {dialog.scrollTop=0;dialog.scrollLeft=0;}
     }
     if(event.target.closest('.dialog-close')) dialog.close();
     if(event.target.closest('#print-resume')) window.print();

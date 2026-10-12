@@ -3053,5 +3053,17 @@ window.PORTFOLIO.resume = {
   "files": {
     "pdf": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.pdf?v=20261012-clean-10",
     "docx": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.docx?v=20261012-clean-10"
-  }
+  },
+  "previewPages": [
+    {
+      "src": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012-page-1.png?v=20261012-clean-10",
+      "width": 1414,
+      "height": 2000
+    },
+    {
+      "src": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012-page-2.png?v=20261012-clean-10",
+      "width": 1414,
+      "height": 2000
+    }
+  ]
 };

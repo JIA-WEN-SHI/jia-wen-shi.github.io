@@ -2,7 +2,7 @@
 
 [公开作品集](https://jia-wen-shi.github.io/)
 
-[新版简历](https://jia-wen-shi.github.io/#resume) · [PDF 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.pdf?v=20261012-clean-10) · [Word 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.docx?v=20261012-clean-10)
+[新版简历](https://jia-wen-shi.github.io/#resume) · [PDF 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.pdf?v=20261012-color-portrait-14) · [Word 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.docx?v=20261012-color-portrait-14)
 
 网站顶部“查看简历”进入站内简历页，完整显示已确认的两页简历，支持放大查看、文字版阅读与 PDF / Word 下载。
 

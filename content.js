@@ -4,7 +4,7 @@ window.PORTFOLIO = {
   roles: 'AI Native 产品经理 / AIGC 产品经理',
   introduction: '我从业务流程中找问题，确定产品范围，再选择合适的模型与实现方式，通过 AI 辅助开发验证方案。做过内容运营平台、阶段式 Agent 工作台和电商主图工具；实践中会检查引用、处理异常并验证修正结果。地毯主图功能已完成付费交付，并由业务方使用。',
   projects: [
-    {id:'evocontent',number:'01',name:'EvoContent · 半自动内容运营平台',en:'CONTENT OPERATIONS',category:'AI Native 探索 · 内容运营',stage:"业务方案已交付 · 独立平台持续开发",role:'需求拆解、产品方案、流程与交互设计；独立实现',github:'https://github.com/JIA-WEN-SHI/evocontent-matrix',demo:'https://jia-wen-shi.github.io/demos/evocontent/',
+    {id:'evocontent',number:'02',name:'EvoContent · 半自动内容运营平台',en:'CONTENT OPERATIONS',category:'AI Native 探索 · 内容运营',stage:"业务方案已交付 · 独立平台持续开发",role:'需求拆解、产品方案、流程与交互设计；独立实现',github:'https://github.com/JIA-WEN-SHI/evocontent-matrix',demo:'https://jia-wen-shi.github.io/demos/evocontent/',
      statement:"先按账号确定内容策略，再组织选题、草稿、审核和发布后的复盘。",image:'assets/evocontent-video-poster.png',imageNote:'本地方案演示录屏，使用示例资料与预置结果。',
      evidence:"业务方案交付 · 账号分层 · 人工审核 · SOP 版本",
      video:'assets/evocontent-demo.mp4',videoPoster:'assets/evocontent-video-poster.png',
@@ -19,7 +19,7 @@ window.PORTFOLIO = {
      flow:['账号分层与人设','外部热点与账号内参考','组织选题和草稿','人工审核','人工发布','监测发布反馈','确认 SOP 调整'],
      implementation:"需求咨询中的方案由我负责整理和交付，对方安排后续开发。EvoContent 的产品结构、流程、交互和本地实现由我独立负责。本地工程已有采集、草稿、审核、发布登记和反馈相关模块；完整的真实发布到反馈链路仍待实际使用验证。Obsidian 知识库的接入继续规划。",
      outcome:"已交付内容运营业务方案，需求方随后自行开发。独立平台已形成原型、本地工程、演示录屏和公开示例。现有工程记录支持说明采集到草稿等链路及部分控制机制；尚不能据此判断客户的运营改善、团队减员或平台的完整业务效果。",},
-    {id:'pmos',number:'02',name:'PM OS · AI 产品工作台',en:'AI PRODUCT WORKSPACE',category:'AI Native · 个人工作台',stage:'个人工作台 · 持续开发',role:'工作流规划、产品结构与交互设计；独立实现',github:'https://github.com/JIA-WEN-SHI/pm-os',demo:'https://jia-wen-shi.github.io/demos/pmos/',
+    {id:'pmos',number:'03',name:'PM OS · AI 产品工作台',en:'AI PRODUCT WORKSPACE',category:'AI Native · 个人工作台',stage:'个人工作台 · 持续开发',role:'工作流规划、产品结构与交互设计；独立实现',github:'https://github.com/JIA-WEN-SHI/pm-os',demo:'https://jia-wen-shi.github.io/demos/pmos/',
      statement:"把产品项目从发现问题到交付复盘的每一步，放进同一个工作台。",image:'assets/pmos.png',imageNote:'本地证据引用测试界面，使用测试资料。',
      evidence:"八阶段方法 · 输入与产出 · 版本核对 · 阶段交接",
      demoScenario:'以“企业知识助手”示例项目，体验从资料到产品方案的整理过程。',
@@ -32,7 +32,7 @@ window.PORTFOLIO = {
      flow:["发现问题", "定义范围", "判断 AI 是否适合", "设计方案", "原型与实验", "评估与迭代", "交付与跟踪", "复盘与复用"],
      implementation:"我负责工作台的阶段规划、产品结构、交互和本地实现。当前工程包括资料版本与原文摘录、报告编辑与版本确认、运行输入快照、相邻阶段交接和后台运行记录。八阶段的界面与内容要求已组织起来；完整方法复用和真实项目全流程验证仍在推进。",
      outcome:"形成八阶段工作方法和可运行的个人工作台。现有验证记录覆盖版本保存、引用回查、上游变化后的复核以及部分真实模型执行；这些是功能与工程层面的依据。尚无真实业务项目贯穿八阶段的完整验收，也没有方法复用收益或错误率改善的正式结果。",},
-    {id:'carpet',number:'03',name:'地毯首图生产平台',en:'CARPET HERO STUDIO',category:'多模态 · 电商首图制作',stage:'主图功能买断交付 · 对方已使用',role:"需求与流程梳理、产品方案、交互设计；通过 AI 辅助开发前端与后端",github:'https://github.com/JIA-WEN-SHI/carpet-hero-studio',demo:'https://jia-wen-shi.github.io/demos/carpet/',
+    {id:'carpet',number:'01',name:'地毯首图生产平台',en:'CARPET HERO STUDIO',category:'多模态 · 电商首图制作',stage:'主图功能买断交付 · 对方已使用',role:"需求与流程梳理、产品方案、交互设计；通过 AI 辅助开发前端与后端",github:'https://github.com/JIA-WEN-SHI/carpet-hero-studio',demo:'https://jia-wen-shi.github.io/demos/carpet/',
      statement:"把已选参考的场景与风格适配到自家地毯，让运营可以直接制作商品主图。",image:"cases/assets/carpet/frontend/05-three-scenes.png",imageNote:"场景选择阶段：左侧是自有 SKU，中间是待采用的场景。先从三张候选中选一张，再融合自家地毯；此时场景中的地毯还不是最终商品结果。截图来自完整案例，使用预制图片演示。",
      evidence:'传统制作经验 · AI 辅助开发 · 主图功能交付',
      demoScenario:"用自有地毯 SKU 与主图参考，先比较三个角度的场景，再把商品融合到选定场景并保存首图。",
@@ -73,9 +73,9 @@ window.PORTFOLIO = {
      outcome:'完成方案、原型和演示材料阶段的交付。需求尚未充分收敛，没有真实商家使用和营销效果验证；后续需先确定一个优先任务，再验证交互和内容可用性。',}
   ],
   featuredIds: [
+    "carpet",
     "evocontent",
-    "pmos",
-    "carpet"
+    "pmos"
 ],
   featuredFlows: {
     "evocontent": {

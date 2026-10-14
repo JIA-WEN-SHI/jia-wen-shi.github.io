@@ -2916,17 +2916,17 @@ window.PORTFOLIO.resume = {
   "email": "shijiawenniu1@gmail.com",
   "portfolio": "https://jia-wen-shi.github.io/",
   "github": "https://github.com/JIA-WEN-SHI",
-  "updated": "2026.10.12",
-  "profile": "具备大模型工作流、阶段式 Agent 与多模态生成应用的产品实践，负责业务流程梳理、范围定义、方案设计及 AI 辅助开发。能够结合业务约束与技术能力边界选择实现方式，兼顾结果质量和使用成本；具备 Bad Case 识别、错误定位、校验拦截与修正验证实践，通过人工确认和版本记录控制风险。地毯主图功能已完成付费交付并被使用。",
+  "updated": "2026.10.14",
+  "profile": "具备需求分析、流程设计、模型选型与 AI 辅助开发能力。地毯主图工具约 1 个月完成开发并付费交付，生成与筛选约 5-8 分钟一套。拥有内容运营方案交付、阶段式 Agent 和异常修正实践，能结合业务约束控制质量、成本与风险。",
   "work": [
     {
       "company": "中科趋势",
       "role": "AIGC 设计师",
       "time": "2024.03 - 至今",
       "bullets": [
-        "负责商业 AIGC 项目的需求沟通、制作推进、版本修改与交付；独立完成中国联通 IP 贺岁视频，负责南方基金项目从客户沟通到成片交付的全过程。",
-        "牵头中国日报网《数字丝路》的需求对接与制作，协调一位同事完成部分镜头；负责央视 AI「两弹一星」相关视频约 70% 的镜头制作。",
-        "使用自建自动化脚本完成华泰证券 IP 内容制作，积累生成工具、制作流程与人工质量检查相结合的交付经验。"
+        "需求与交付：将客户需求转化为制作方案，推进生成、修改与交付；独立完成中国联通 IP 贺岁视频，负责南方基金项目从需求沟通到成片交付。",
+        "协作推进：牵头中国日报网《数字丝路》需求对接与制作，协调 1 位同事完成部分镜头；负责央视 AI「两弹一星」相关视频约 70% 的镜头制作。",
+        "流程实践：使用自建自动化脚本完成华泰证券 IP 内容制作，将生成工具、制作流程与人工质量检查结合。"
       ]
     },
     {
@@ -2934,8 +2934,8 @@ window.PORTFOLIO.resume = {
       "role": "设计",
       "time": "2023.04 - 2023.10",
       "bullets": [
-        "从事地毯电商主图、详情页、3D 渲染及图像处理，围绕商品特征、应用场景和家居搭配制作展示素材。",
-        "梳理渲染制作流程与图片质量标准，积累天津武清地毯行业的图像生产经验；相关制作方法仍被原团队沿用。"
+        "电商场景：负责地毯主图、详情页、3D 渲染与图像处理，围绕商品特征、应用场景及家居搭配制作展示素材。",
+        "流程标准：梳理渲染制作流程与图片质量标准，形成天津武清地毯行业的图像生产方法，相关方法仍被原团队沿用。"
       ]
     }
   ],
@@ -2944,38 +2944,39 @@ window.PORTFOLIO.resume = {
       "id": "carpet",
       "name": "地毯首图生产平台",
       "role": "产品方案及前后端 AI 辅助开发",
-      "status": "2026.05 启动，开发约一个月；主图功能已付费买断交付并使用",
+      "status": "2026.05 启动 · 开发约 1 个月 · 主图功能已付费买断交付并使用",
       "url": "https://jia-wen-shi.github.io/#case-carpet",
       "bullets": [
-        "梳理运营选参考、分析链接与设计师制作的原有分工，将首版范围限定为已有商品与已选参考的场景主图，让运营能够直接操作；纯原创设计继续由设计师完成。",
-        "设计参考主图、自有 SKU、三角度场景比较、人工采用、商品融合和核对保存流程。使用 Image 2.0，按生成结果手动调整场景与融合提示词，分别检查构图、搭配及商品颜色、材质和图案。",
-        "负责产品方案、交互设计及前后端 AI 辅助开发。工程使用 React / TypeScript、Node.js / Fastify 与 Supabase，组织素材输入、任务状态、接口适配与结果保存。",
-        "主图功能向天津前老板一次性买断交付，已收款、对方已使用。本人提供的制作口径为生成与筛选约 5-8 分钟一套，不含运营提前准备商品及竞品参考的时间。"
-      ]
-    },
-    {
-      "id": "evocontent",
-      "name": "EvoContent 半自动内容运营平台",
-      "role": "需求分析、产品设计与独立实现",
-      "status": "业务方案已交付；独立平台持续开发",
-      "url": "https://jia-wen-shi.github.io/#case-evocontent",
-      "bullets": [
-        "从留学与移民业务团队的内容效率问题出发，梳理账号分层、人设、选题、草稿审核与反馈流程，交付业务方案，由业务方自行开发。围绕同类需求独立构建内容工作台，并沉淀内容 Skill。",
-        "针对自动发布容易触发平台风控的问题，取消自动发布，保留人工发布与登记；策略调整先形成建议，经人工确认后更新 SOP。",
-        "本地运行已覆盖参考采集到待审核草稿，保留来源引用和任务状态；通过重复任务复用、已有素材保留及局部重试，处理重复操作和采集失败。真实发布到反馈的完整链路仍在验证。"
+        "交付与效率：完成主图功能的一次性买断交付并收款，业务方已使用；生成与筛选约 5-8 分钟一套，不含运营准备商品与竞品参考的时间。",
+        "需求与范围：梳理运营选参考、分析链接与设计师制作的分工，将首版聚焦已有商品的场景主图，让运营直接操作；纯原创设计保留给设计师。",
+        "技术与质量：采用 Image 2.0，设计三角度场景比较、人工采用、商品融合与核对保存；按结果调整提示词，检查构图、搭配及商品颜色、材质、图案。生成调用费用参考约 0.5 元/次，不含人工。",
+        "开发与验证：通过 Codex、Superpowers 辅助完成前后端开发，使用 React / TypeScript、Node.js / Fastify 与 Supabase，实现素材输入、任务状态、接口适配及结果保存。"
       ]
     },
     {
       "id": "pmos",
       "name": "PM OS AI 产品工作台",
       "role": "产品方法、工作流设计与独立实现",
-      "status": "个人工作台；持续开发",
+      "status": "个人产品项目 · 已验证部分执行与交接机制 · 持续开发",
       "url": "https://jia-wen-shi.github.io/#case-pmos",
       "bullets": [
-        "为解决项目资料、分析与方法难以复用的问题，设计发现、定义、可行性、方案、实验、评估、交付和复盘八阶段工作台，明确各阶段的输入、产出与人工确认条件。",
-        "通过 AI 辅助实现资料版本、原文引用、报告确认、运行输入快照及相邻阶段交接；使用 Agno 组织阶段 Agent 执行，保存项目资料、运行记录与方法版本。",
-        "在使用模拟业务材料的真实模型测试中，利用引用类型校验拦截错误结果，通过追问修正后采用并保存；将模型已生成、人工已采用和阶段已验收设为不同状态。",
-        "设计上游变更后的下游复核规则，区分草稿与确认版，保留历史运行对应的输入版本。目前已验证部分执行和交接机制，完整八阶段业务项目验收仍在推进。"
+        "流程定义：设计从问题发现到交付复盘的 8 阶段工作台，明确各阶段输入、产出与人工确认条件，将产品方法组织为可执行流程。",
+        "Agent 实现：使用 Agno 组织阶段执行，通过 AI 辅助开发资料版本、原文引用、报告确认、运行输入快照及相邻阶段交接，保留执行依据。",
+        "异常验证：在模拟业务材料的真实模型测试中，识别模型把报告／交接 ID 误当成来源 ID 的问题；通过引用类型校验拦截，追问修正后采用并保存。",
+        "质量控制：区分模型生成、人工采用与阶段验收；上游变更后复核下游，保留草稿、确认版与历史输入。完整 8 阶段业务验收仍在推进。"
+      ]
+    },
+    {
+      "id": "evocontent",
+      "name": "EvoContent 半自动内容运营平台",
+      "role": "需求分析、产品设计与独立实现",
+      "status": "业务方案已交付，业务方自行开发 · 独立平台持续开发",
+      "url": "https://jia-wen-shi.github.io/#case-evocontent",
+      "bullets": [
+        "方案交付：针对留学与移民团队的内容效率需求，梳理账号分层、人设、选题、审核与反馈，完成业务方案交付，由业务方自行开发。",
+        "产品实现：围绕同类需求独立构建内容工作台，沉淀内容 Skill；本地运行覆盖参考采集到待审核草稿，保留来源引用与任务状态。",
+        "风险取舍：针对自动发布触发平台风控的问题，取消自动发布，保留人工发布与登记；策略建议经人工确认后更新 SOP。",
+        "异常处理：支持重复任务复用、已有素材保留及局部重试，处理重复操作与采集失败；真实发布到反馈的完整链路仍在验证。"
       ]
     }
   ],
@@ -2984,39 +2985,39 @@ window.PORTFOLIO.resume = {
       "id": "legal",
       "name": "债权申报审查工作台",
       "url": "https://jia-wen-shi.github.io/#case-legal",
-      "text": "承接律师使用 Excel 加人工审核流水的真实需求，负责业务流程、整体方案及前端原型，参与识别字段与审核逻辑的研发对接。原型交给合作朋友展示，后续客户取消需求，项目未落地。"
+      "text": "业务流程与原型：梳理律师使用 Excel 加人工审核流水的需求，负责整体方案、前端原型与字段识别的研发对接。原型已展示；客户取消需求，未落地。"
     },
     {
       "id": "store",
       "name": "实体门店 AI 经营助手",
       "url": "https://jia-wen-shi.github.io/#case-store",
-      "text": "通过私董会负责人对接两家北京商家，进行线下需求接触，整理经营看板、营销准备和客户回访流程，完成方案与交互原型阶段的交付。"
+      "text": "需求接触与方案：对接 2 家北京商家并进行线下需求接触，整理经营看板、营销准备与回访流程，交付方案和交互原型。"
     }
   ],
   "skills": [
     [
-      "产品分析与设计",
-      "业务流程梳理、需求拆解、范围定义、PRD、交互原型与验收条件设计；使用 Axure、XMind。"
-    ],
-    [
-      "AI 辅助开发",
-      "使用 Codex、Hermes、Cursor、Superpowers 辅助方案验证与前后端开发；有 API 接口对接、图像模型接入及 Supabase 使用实践。"
+      "产品分析与验证",
+      "业务流程、需求拆解、范围定义、PRD、交互原型及验收条件；Axure、XMind。"
     ],
     [
       "Agent 与自动化",
-      "使用 Agno、n8n、MCP、Agent Skills 与工具调用（Tool Calling）；编写内容 Skill，连接微信发布相关工具与 Supabase，使用 n8n 采集信息。"
+      "Agno、n8n、MCP、Agent Skills、Tool Calling；编写内容 Skill，实践微信工具与 Supabase 接入、信息采集。"
     ],
     [
-      "生成模型与应用",
-      "围绕图像编辑、商品控图、数字人口播与视频制作选择工具；使用过 Image 2.0 / GPT Image、Midjourney、即梦、Seedance 2.0、海螺、Runway 等。"
+      "AI 辅助开发",
+      "Codex、Hermes、Cursor、Superpowers；前后端辅助开发、API 对接、图像模型接入与 Supabase 使用。"
     ],
     [
-      "开源工作流与训练实践",
-      "搭建过 ComfyUI / Redux 工作流，使用过 Stable Diffusion 等开源图像工具；基础了解人脸 LoRA 训练，实践过素材整理、打标与基础训练流程。"
+      "多模态模型应用",
+      "图像编辑、商品控图、数字人口播与视频制作；Image 2.0 / GPT Image、Midjourney、即梦、Seedance 2.0、海螺、Runway。"
+    ],
+    [
+      "开源与训练基础",
+      "ComfyUI / Redux 工作流、Stable Diffusion；基础了解人脸 LoRA，实践素材整理、打标与基础训练。"
     ],
     [
       "视觉与视频制作",
-      "使用 Photoshop、3ds Max 制作电商图片与渲染素材；具备 Maya、Premiere Pro、After Effects 基础使用经验。使用 FFmpeg、Remotion、ElevenLabs 制作和处理视频、语音。"
+      "Photoshop、3ds Max；Maya、Premiere Pro、After Effects 基础使用。FFmpeg、Remotion、ElevenLabs 视频及语音处理。"
     ]
   ],
   "community": {
@@ -3024,8 +3025,8 @@ window.PORTFOLIO.resume = {
     "role": "发起与运营",
     "time": "2025.10 - 至今",
     "bullets": [
-      "组织约 200 人的线下交流社群，已开展近 20 场主题活动，围绕 AI Native、Agent、知识库与业务场景交流。",
-      "组织成员参与 AI 黑客松，通过线下交流接触不同领域的从业者，积累业务需求线索与合作机会。"
+      "组织约 200 人的线下交流社群，开展近 20 场主题活动，围绕 AI Native、Agent、知识库与业务场景交流。",
+      "组织成员参与 AI 黑客松，对接不同领域从业者，积累业务需求线索与合作机会。"
     ]
   },
   "education": {
@@ -3033,7 +3034,7 @@ window.PORTFOLIO.resume = {
     "degree": "本科",
     "major": "工业设计",
     "time": "2017 - 2021",
-    "campus": "院学生会副主席；RT 舞社 Breaking 社长。参与组织校园活动与社团训练、演出。"
+    "campus": "院学生会副主席；RT 舞社 Breaking 社长，组织校园活动、社团训练与演出。"
   },
   "locationLabel": "所在地",
   "honors": [
@@ -3051,17 +3052,17 @@ window.PORTFOLIO.resume = {
   ],
   "pageCount": 2,
   "files": {
-    "pdf": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.pdf?v=20261012-color-portrait-14",
-    "docx": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.docx?v=20261012-color-portrait-14"
+    "pdf": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.pdf?v=20261014-recruiting-15",
+    "docx": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.docx?v=20261014-recruiting-15"
   },
   "previewPages": [
     {
-      "src": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012-page-1.png?v=20261012-color-portrait-14",
+      "src": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012-page-1.png?v=20261014-recruiting-15",
       "width": 1414,
       "height": 2000
     },
     {
-      "src": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012-page-2.png?v=20261012-color-portrait-14",
+      "src": "assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012-page-2.png?v=20261014-recruiting-15",
       "width": 1414,
       "height": 2000
     }

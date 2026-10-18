@@ -638,7 +638,7 @@ window.PORTFOLIO = {
   community: {
     "name": "NeuroLab 纽罗实验室 · 北京 AI 社群",
     "started": "2025.10 起",
-    "summary": "从 0 发起并运营约 200 人的北京 AI 线下社群，开展约 20 场主题活动，围绕 AI Native、Agent、知识库与业务场景交流，形成需求验证与种子用户接触渠道。",
+    "summary": "从 0 发起并运营约 200 人的北京 AI 线下社群，开展 20+ 场主题活动，围绕 AI Native、Agent、知识库与业务场景交流，形成需求验证与种子用户接触渠道。",
     "practice": "组织社群成员参与 AI 黑客松，持续收集一线业务需求与合作机会，辅助获客。",
     "url": "https://www.xiaohongshu.com/user/profile/664d5201000000001b01b66f"
 },
@@ -3063,7 +3063,7 @@ window.PORTFOLIO.resume = {
     "role": "发起与运营",
     "time": "2025.10 - 至今",
     "bullets": [
-      "从 0 发起并运营约 200 人的线下交流社群，开展约 20 场主题活动（AI Native、Agent、知识库与业务场景），沉淀可直接触达从业者的需求验证与种子用户渠道。",
+      "从 0 发起并运营约 200 人的线下交流社群，开展 20+ 场主题活动（AI Native、Agent、知识库与业务场景），沉淀可直接触达从业者的需求验证与种子用户渠道。",
       "组织社群成员参与 AI 黑客松，持续收集一线业务需求与合作机会。"
     ]
   },
@@ -3084,16 +3084,16 @@ window.PORTFOLIO.resume = {
   "interests": [],
   "pageCount": 2,
   "files": {
-    "pdf": "assets/resume/shi-jiawen-ai-product-resume-20261019.pdf?v=20261019-resume-sync-17"
+    "pdf": "assets/resume/shi-jiawen-ai-product-resume-20261019.pdf?v=20261019-resume-sync-18"
   },
   "previewPages": [
     {
-      "src": "assets/resume/shi-jiawen-ai-product-resume-20261019-page-1.png?v=20261019-resume-sync-17",
+      "src": "assets/resume/shi-jiawen-ai-product-resume-20261019-page-1.png?v=20261019-resume-sync-18",
       "width": 1273,
       "height": 1800
     },
     {
-      "src": "assets/resume/shi-jiawen-ai-product-resume-20261019-page-2.png?v=20261019-resume-sync-17",
+      "src": "assets/resume/shi-jiawen-ai-product-resume-20261019-page-2.png?v=20261019-resume-sync-18",
       "width": 1273,
       "height": 1800
     }

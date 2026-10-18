@@ -2,9 +2,9 @@
 
 [公开作品集](https://jia-wen-shi.github.io/)
 
-[新版简历](https://jia-wen-shi.github.io/#resume) · [PDF 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.pdf?v=20261014-projects-first-16) · [Word 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-clean-two-column-20261012.docx?v=20261014-projects-first-16)
+[新版简历](https://jia-wen-shi.github.io/#resume) · [PDF 下载](https://jia-wen-shi.github.io/assets/resume/shi-jiawen-ai-product-resume-20261019.pdf?v=20261019-resume-sync-17)
 
-网站顶部“查看简历”进入站内简历页，完整显示已确认的两页简历，支持放大查看、文字版阅读与 PDF / Word 下载。
+网站顶部“查看简历”进入站内简历页，完整显示已确认的两页简历，支持放大查看、文字版阅读与 PDF 下载。
 
 五个项目的案例、公开源码和五项可直接操作的前端演示。内容仍在逐步完善，不把模拟数据或未验收的能力写成真实业务成果。
 
